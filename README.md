@@ -33,9 +33,6 @@ Here are some ideas to get you started:
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=Hughhhhcoder&theme=dark&layout=compact)
 ![](https://activity-graph.herokuapp.com/graph?username=Hughhhhcoder&theme=github)
 
-![Harlok's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=Hughhhhcoder
-)
-<img align='center'src="https://github-readme-stats.vercel.app/api/wakatime?username=Hughhhhcoder"/> 
 
 
 <!--START_SECTION:waka-->
