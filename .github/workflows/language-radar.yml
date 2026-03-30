@@ -26,9 +26,25 @@ jobs:
         run: |
           python scripts/generate_language_radar.py \
             --username Hughhhhcoder \
-            --output assets/language-radar.svg \
+            --output assets/language-radar-dark.svg \
             --include-forks \
-            --include-private
+            --include-private \
+            --theme dark
+
+          python scripts/generate_language_radar.py \
+            --username Hughhhhcoder \
+            --output assets/language-radar-light.svg \
+            --include-forks \
+            --include-private \
+            --theme light
+
+          python scripts/generate_motion_strip.py \
+            --output assets/motion-strip-dark.svg \
+            --theme dark
+
+          python scripts/generate_motion_strip.py \
+            --output assets/motion-strip-light.svg \
+            --theme light
 
       - name: Commit and push if changed
         run: |
@@ -38,6 +54,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/language-radar.svg
+          git add -A assets
           git commit -m "chore: update language radar"
           git push

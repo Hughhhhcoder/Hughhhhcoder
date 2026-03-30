@@ -1,5 +1,17 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=230&text=HughhhhCoder&fontSize=56&fontAlign=50&fontAlignY=38&desc=Neural%20Interface%20Online%20%7C%20Build%20Clean%20AI%20Systems&descAlign=50&descAlignY=62&animation=twinkling&color=0:020617,30:0f172a,65:0f766e,100:0ea5e9&fontColor=e2e8f0" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=waving&height=250&text=HughhhhCoder&fontSize=58&fontAlign=50&fontAlignY=36&desc=Design%20x%20Engineering%20x%20AI&descAlign=50&descAlignY=58&animation=twinkling&color=0:020617,40:0f172a,75:0f766e,100:0ea5e9&fontColor=e2e8f0" />
+    <source media="(prefers-color-scheme: light)" srcset="https://capsule-render.vercel.app/api?type=waving&height=250&text=HughhhhCoder&fontSize=58&fontAlign=50&fontAlignY=36&desc=Design%20x%20Engineering%20x%20AI&descAlign=50&descAlignY=58&animation=twinkling&color=0:f8fafc,35:e0f2fe,70:bae6fd,100:38bdf8&fontColor=0f172a" />
+    <img src="https://capsule-render.vercel.app/api?type=waving&height=250&text=HughhhhCoder&fontSize=58" alt="Header" />
+  </picture>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/motion-strip-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/motion-strip-light.svg" />
+    <img src="./assets/motion-strip-dark.svg" alt="Animated background strip" />
+  </picture>
 </p>
 
 <p align="center">
@@ -10,32 +22,64 @@
 </p>
 
 <p align="center">
-  <code>MODE: DESIGN x ENGINEERING x AI PRODUCT</code>
+  <strong>MODE:</strong> Design x Engineering x AI Product
 </p>
 
-## /about
+## About
 
 - Product-minded full-stack developer focused on clean UX and resilient architecture.
 - Building useful AI products with `Vue + TypeScript + FastAPI + MySQL + Redis`.
 - Motto: **慢慢走，比较快**.
 
-## /tech_matrix
-
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=vue,ts,tailwind,python,fastapi,mysql,redis,docker,git,linux&theme=dark&perline=10" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/motion-strip-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/motion-strip-light.svg" />
+    <img src="./assets/motion-strip-dark.svg" alt="Animated divider" />
+  </picture>
 </p>
 
-## /language_spectrum
+## Tech Stack
 
 <p align="center">
-  <img src="./assets/language-radar.svg" alt="Language spectrum radar" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=vue,ts,tailwind,python,fastapi,mysql,redis,docker,git,linux&theme=dark&perline=10" />
+    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=vue,ts,tailwind,python,fastapi,mysql,redis,docker,git,linux&theme=light&perline=10" />
+    <img src="https://skillicons.dev/icons?i=vue,ts,tailwind,python,fastapi,mysql,redis,docker,git,linux&theme=dark&perline=10" alt="Tech stack" />
+  </picture>
 </p>
 
 <p align="center">
-  <sub>Dual-view (donut + bars), auto-updated daily. Private repos are included when <code>PROFILE_STATS_PAT</code> is configured.</sub>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/motion-strip-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/motion-strip-light.svg" />
+    <img src="./assets/motion-strip-dark.svg" alt="Animated divider" />
+  </picture>
 </p>
 
-## /mission_log
+## Language Spectrum
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/language-radar-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/language-radar-light.svg" />
+    <img src="./assets/language-radar-dark.svg" alt="Language Spectrum" />
+  </picture>
+</p>
+
+<p align="center">
+  <sub>Dual-view radar + bars. Auto-updated daily. Private repositories are included when <code>PROFILE_STATS_PAT</code> is configured.</sub>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/motion-strip-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/motion-strip-light.svg" />
+    <img src="./assets/motion-strip-dark.svg" alt="Animated divider" />
+  </picture>
+</p>
+
+## Mission Log
 
 ```text
 [01] Ship useful AI features with production reliability
@@ -43,17 +87,41 @@
 [03] Keep iterating: slow is smooth, smooth is fast
 ```
 
-## /signals
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/motion-strip-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/motion-strip-light.svg" />
+    <img src="./assets/motion-strip-dark.svg" alt="Animated divider" />
+  </picture>
+</p>
+
+## Signals
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=Hughhhhcoder&hide_border=true&background=00000000&ring=22d3ee&fire=22d3ee&currStreakLabel=38bdf8&sideLabels=94a3b8&dates=94a3b8" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=Hughhhhcoder&theme=tokyonight&hide_border=true" />
+    <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=Hughhhhcoder&theme=default&hide_border=true" />
+    <img src="https://streak-stats.demolab.com?user=Hughhhhcoder&theme=tokyonight&hide_border=true" alt="GitHub streak" />
+  </picture>
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Hughhhhcoder&bg_color=020617&color=7dd3fc&line=22d3ee&point=e2e8f0&area=true&hide_border=true" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=Hughhhhcoder&bg_color=020617&color=7dd3fc&line=22d3ee&point=e2e8f0&area=true&hide_border=true" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=Hughhhhcoder&bg_color=f8fafc&color=0f172a&line=0284c7&point=0ea5e9&area=true&hide_border=true" />
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=Hughhhhcoder&bg_color=020617&color=7dd3fc&line=22d3ee&point=e2e8f0&area=true&hide_border=true" alt="Contribution activity" />
+  </picture>
 </p>
 
-## /connect
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/motion-strip-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/motion-strip-light.svg" />
+    <img src="./assets/motion-strip-dark.svg" alt="Animated divider" />
+  </picture>
+</p>
+
+## Connect
 
 <p align="center">
   <a href="https://github.com/Hughhhhcoder">
