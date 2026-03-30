@@ -415,6 +415,13 @@ def int_or_zero(value: object) -> int:
         return 0
 
 
+def int_or_none(value: object) -> int | None:
+    try:
+        return int(value)  # type: ignore[arg-type]
+    except (TypeError, ValueError):
+        return None
+
+
 def classify_private_access_error(exc: Exception) -> str:
     message = str(exc)
     if "HTTP 401" in message:
@@ -449,15 +456,65 @@ def fetch_authenticated_user(username: str, token: str) -> dict:
     return payload
 
 
-def official_repo_totals(public_user: dict, auth_user: dict | None) -> Tuple[int, int, int]:
+def owner_repo_counts(username: str, repos_raw: Sequence[dict]) -> Tuple[int, int, int]:
+    owner = username.lower()
+    total = 0
+    public_count = 0
+    private_count = 0
+    for item in repos_raw:
+        if not isinstance(item, dict):
+            continue
+        owner_obj = item.get("owner") if isinstance(item.get("owner"), dict) else {}
+        if str(owner_obj.get("login", "")).lower() != owner:
+            continue
+        total += 1
+        if bool(item.get("private", False)):
+            private_count += 1
+        else:
+            public_count += 1
+    return total, public_count, private_count
+
+
+def official_repo_totals(
+    username: str,
+    public_user: dict,
+    auth_user: dict | None,
+    repos_raw: Sequence[dict],
+    warnings: List[str],
+) -> Tuple[int, int, int]:
     base = auth_user if auth_user is not None else public_user
     public_repos = int_or_zero(base.get("public_repos"))
     private_repos = 0
+    listing_total, listing_public, listing_private = owner_repo_counts(username, repos_raw)
+    fallback_used = False
+
     if auth_user is not None:
-        private_repos = int_or_zero(auth_user.get("owned_private_repos"))
-        if private_repos <= 0:
-            private_repos = int_or_zero(auth_user.get("total_private_repos"))
+        owned_private = int_or_none(auth_user.get("owned_private_repos"))
+        total_private = int_or_none(auth_user.get("total_private_repos"))
+        private_from_profile = owned_private if owned_private is not None else total_private
+
+        if private_from_profile is None:
+            private_repos = listing_private
+            if listing_public > 0:
+                public_repos = max(public_repos, listing_public)
+            fallback_used = True
+        else:
+            private_repos = max(0, private_from_profile)
+            if private_repos == 0 and listing_private > 0:
+                # Fine-grained tokens can return null/zero counters in /user; use real listing values.
+                private_repos = listing_private
+                public_repos = max(public_repos, listing_public)
+                fallback_used = True
+
     total_repos = public_repos + private_repos
+    if fallback_used and listing_total > total_repos:
+        total_repos = listing_total
+
+    if fallback_used:
+        warnings.append(
+            "Used /user/repos listing fallback for totals because /user private counters were unavailable."
+        )
+
     return public_repos, private_repos, total_repos
 
 
@@ -598,12 +655,7 @@ def build_language_rows(totals: Dict[str, int], max_rows: int = 10) -> Tuple[Lis
         return [], 0
 
     ranked = sorted(totals.items(), key=lambda kv: kv[1], reverse=True)
-    if len(ranked) > max_rows:
-        head = ranked[: max_rows - 1]
-        other = sum(value for _, value in ranked[max_rows - 1 :])
-        head.append(("Other", other))
-    else:
-        head = ranked
+    head = ranked[:max_rows]
 
     rows = [(name, value, (value / total_bytes) * 100.0) for name, value in head]
     return rows, total_bytes
@@ -718,7 +770,7 @@ def build_snapshot(
     tech_stack = resolve_tech(config.get("core_tech", []), repos, language_totals)
     ai_platforms = resolve_ai_platforms(config.get("ai_platforms", []))
 
-    status_note = "Data source: official totals + non-fork language aggregation."
+    status_note = "Data source: repository listing totals + non-fork language aggregation."
     if data_mode == "public+private":
         status_note += " Private data enabled."
     elif "private-data-unavailable" in data_mode:
@@ -983,7 +1035,7 @@ def render_experience(snapshot: Snapshot, config: dict, theme_name: str, motion_
         f'<text x="{margin + 24}" y="{y_lang + 44}" fill="{theme["text"]}" font-size="30" font-family="{DESIGN_TOKENS["font"]["display"]}" font-weight="700">Language Intelligence</text>'
     )
     lines.append(
-        f'<text x="{margin + 24}" y="{y_lang + 70}" fill="{theme["muted"]}" font-size="16" font-family="{DESIGN_TOKENS["font"]["display"]}">Byte-level aggregation from each repository languages endpoint.</text>'
+        f'<text x="{margin + 24}" y="{y_lang + 70}" fill="{theme["muted"]}" font-size="16" font-family="{DESIGN_TOKENS["font"]["display"]}">Top 10 languages by bytes from each repository languages endpoint.</text>'
     )
 
     left_x = margin + 24
@@ -1012,15 +1064,20 @@ def render_experience(snapshot: Snapshot, config: dict, theme_name: str, motion_
 
     angle = -90.0
     language_rows = snapshot.language_rows if snapshot.language_rows else [("No Data", 1, 100.0)]
+    segment_gap = 0.9 if len(language_rows) > 1 else 0.0
     for idx, (lang, _bytes, pct) in enumerate(language_rows[:10]):
-        sweep = max(0.8, pct / 100.0 * 360.0)
+        sweep = (pct / 100.0) * 360.0
+        if sweep <= 0.08:
+            continue
+        draw_sweep = max(0.08, sweep - segment_gap)
+        start_angle = angle + (segment_gap / 2.0)
         path = ring_segment_path(
             donut_cx,
             donut_cy,
             donut_outer_r,
             donut_inner_r,
-            angle,
-            sweep,
+            start_angle,
+            draw_sweep,
         )
         color = theme["bars"][idx % len(theme["bars"])]
         lines.append(
@@ -1038,16 +1095,17 @@ def render_experience(snapshot: Snapshot, config: dict, theme_name: str, motion_
         f'<text x="{donut_cx}" y="{donut_cy + 20}" text-anchor="middle" fill="{theme["text"]}" font-size="24" font-family="{DESIGN_TOKENS["font"]["display"]}" font-weight="700">{compact_bytes(snapshot.total_bytes)}</text>'
     )
 
-    legend_start = left_y + 344
-    for idx, (lang, _bytes, pct) in enumerate(language_rows[:6]):
+    legend_start = left_y + 338
+    legend_row_step = 22
+    for idx, (lang, _bytes, pct) in enumerate(language_rows[:10]):
         row = idx // 2
         col = idx % 2
         lx = left_x + 28 + col * 234
-        ly = legend_start + row * 30
+        ly = legend_start + row * legend_row_step
         color = theme["bars"][idx % len(theme["bars"])]
         lines.append(f'<circle cx="{lx}" cy="{ly}" r="6" fill="{color}"/>')
         lines.append(
-            f'<text x="{lx + 14}" y="{ly + 5}" fill="{theme["text"]}" font-size="14" font-family="{DESIGN_TOKENS["font"]["mono"]}">{esc(lang)} {pct:.1f}%</text>'
+            f'<text x="{lx + 14}" y="{ly + 5}" fill="{theme["text"]}" font-size="14" font-family="{DESIGN_TOKENS["font"]["mono"]}">{esc(wrap_line(lang, 11))} {pct:.1f}%</text>'
         )
 
     bar_start_y = right_y + 28
@@ -1078,11 +1136,11 @@ def render_experience(snapshot: Snapshot, config: dict, theme_name: str, motion_
                 f'<rect x="{bar_x}" y="{by + 2}" width="{fill_w}" height="18" rx="9" fill="{color}" opacity="0.95"/>'
             )
         lines.append(
-            f'<text x="{pct_x}" y="{by + 18}" text-anchor="end" fill="{theme["accent2"]}" font-size="16" font-family="{DESIGN_TOKENS["font"]["mono"]}">{pct:.1f}%</text>'
+            f'<text x="{pct_x}" y="{by + 18}" text-anchor="end" fill="{color}" font-size="16" font-family="{DESIGN_TOKENS["font"]["mono"]}">{pct:.1f}%</text>'
         )
 
     lines.append(
-        f'<text x="{right_x + 22}" y="{right_y + right_h - 26}" fill="{theme["muted"]}" font-size="14" font-family="{DESIGN_TOKENS["font"]["mono"]}">Private repos: {snapshot.official_private_repos} | Non-fork repos scanned: {snapshot.scanned_repos}</text>'
+        f'<text x="{right_x + 22}" y="{right_y + right_h - 26}" fill="{theme["muted"]}" font-size="14" font-family="{DESIGN_TOKENS["font"]["mono"]}">Total repos: {snapshot.official_total_repos} | Private repos: {snapshot.official_private_repos} | Non-fork scanned: {snapshot.scanned_repos}</text>'
     )
 
     # Repository pulse section
@@ -1251,12 +1309,6 @@ def main() -> int:
                 raise RuntimeError(classify_private_access_error(exc)) from exc
             warnings.append(classify_private_access_error(exc))
 
-    official_public_repos, official_private_repos, official_total_repos = official_repo_totals(
-        public_user,
-        auth_user,
-    )
-    display_user = auth_user if auth_user is not None else public_user
-
     repos_raw, data_mode = fetch_repositories(
         args.username,
         token,
@@ -1264,6 +1316,14 @@ def main() -> int:
         require_private_data=args.require_private_data,
         warnings=warnings,
     )
+    official_public_repos, official_private_repos, official_total_repos = official_repo_totals(
+        args.username,
+        public_user,
+        auth_user,
+        repos_raw,
+        warnings,
+    )
+    display_user = auth_user if auth_user is not None else public_user
     repos = collect_repos(
         args.username,
         repos_raw,
