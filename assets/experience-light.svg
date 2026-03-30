@@ -136,52 +136,72 @@
 <rect x="576" y="1272" width="568" height="436" rx="20" fill="#f8fafc" stroke="#cbd5e1"/>
 <circle cx="306" cy="1467" r="135" fill="none" stroke="#cbd5e1" stroke-width="42" opacity="0.42"/>
 <circle cx="306" cy="1467" r="141" fill="none" stroke="#0ea5e9" stroke-width="1.2" opacity="0.25"/>
-<path d="M 306.00 1332.00 A 135.00 135.00 0 1 1 271.57 1597.54 L 282.28 1556.93 A 93.00 93.00 0 1 0 306.00 1374.00 Z" fill="#0369A1" opacity="0.94"/>
-<path d="M 271.57 1597.54 A 135.00 135.00 0 0 1 196.84 1387.57 L 230.80 1412.28 A 93.00 93.00 0 0 0 282.28 1556.93 Z" fill="#C2410C" opacity="0.94"/>
-<path d="M 196.84 1387.57 A 135.00 135.00 0 0 1 278.98 1334.73 L 287.38 1375.88 A 93.00 93.00 0 0 0 230.80 1412.28 Z" fill="#4D7C0F" opacity="0.94"/>
-<path d="M 278.98 1334.73 A 135.00 135.00 0 0 1 299.94 1332.14 L 301.83 1374.09 A 93.00 93.00 0 0 0 287.38 1375.88 Z" fill="#BE123C" opacity="0.94"/>
-<path d="M 299.94 1332.14 A 135.00 135.00 0 0 1 303.44 1332.02 L 304.23 1374.02 A 93.00 93.00 0 0 0 301.83 1374.09 Z" fill="#1D4ED8" opacity="0.94"/>
-<path d="M 303.44 1332.02 A 135.00 135.00 0 0 1 306.00 1332.00 L 306.00 1374.00 A 93.00 93.00 0 0 0 304.23 1374.02 Z" fill="#A16207" opacity="0.94"/>
+<path d="M 306.00 1332.00 A 135.00 135.00 0 0 1 388.97 1573.50 L 363.16 1540.36 A 93.00 93.00 0 0 0 306.00 1374.00 Z" fill="#0369A1" opacity="0.94"/>
+<path d="M 388.97 1573.50 A 135.00 135.00 0 0 1 197.16 1546.87 L 231.02 1522.02 A 93.00 93.00 0 0 0 363.16 1540.36 Z" fill="#C2410C" opacity="0.94"/>
+<path d="M 197.16 1546.87 A 135.00 135.00 0 0 1 223.68 1360.00 L 249.29 1393.29 A 93.00 93.00 0 0 0 231.02 1522.02 Z" fill="#4D7C0F" opacity="0.94"/>
+<path d="M 223.68 1360.00 A 135.00 135.00 0 0 1 252.93 1342.87 L 269.44 1381.49 A 93.00 93.00 0 0 0 249.29 1393.29 Z" fill="#BE123C" opacity="0.94"/>
+<path d="M 252.93 1342.87 A 135.00 135.00 0 0 1 276.33 1335.30 L 285.56 1376.27 A 93.00 93.00 0 0 0 269.44 1381.49 Z" fill="#1D4ED8" opacity="0.94"/>
+<path d="M 276.33 1335.30 A 135.00 135.00 0 0 1 288.33 1333.16 L 293.83 1374.80 A 93.00 93.00 0 0 0 285.56 1376.27 Z" fill="#A16207" opacity="0.94"/>
+<path d="M 288.33 1333.16 A 135.00 135.00 0 0 1 299.52 1332.16 L 301.54 1374.11 A 93.00 93.00 0 0 0 293.83 1374.80 Z" fill="#047857" opacity="0.94"/>
+<path d="M 299.52 1332.16 A 135.00 135.00 0 0 1 304.46 1332.01 L 304.94 1374.01 A 93.00 93.00 0 0 0 301.54 1374.11 Z" fill="#7E22CE" opacity="0.94"/>
+<path d="M 304.46 1332.01 A 135.00 135.00 0 0 1 306.35 1332.00 L 306.24 1374.00 A 93.00 93.00 0 0 0 304.94 1374.01 Z" fill="#E11D48" opacity="0.94"/>
+<path d="M 306.35 1332.00 A 135.00 135.00 0 0 1 308.23 1332.02 L 307.54 1374.01 A 93.00 93.00 0 0 0 306.24 1374.00 Z" fill="#0F766E" opacity="0.94"/>
 <circle cx="306" cy="1467" r="85" fill="#ffffff" stroke="#cbd5e1"/>
 <text x="306" y="1459" text-anchor="middle" fill="#334155" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Total Code</text>
-<text x="306" y="1487" text-anchor="middle" fill="#0f172a" font-size="24" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="700">420.01 KB</text>
+<text x="306" y="1487" text-anchor="middle" fill="#0f172a" font-size="24" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="700">2.59 MB</text>
 <circle cx="84" cy="1616" r="6" fill="#0369A1"/>
-<text x="98" y="1621" fill="#0f172a" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Python 54.1%</text>
+<text x="98" y="1621" fill="#0f172a" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">TypeScript 39.5%</text>
 <circle cx="318" cy="1616" r="6" fill="#C2410C"/>
-<text x="332" y="1621" fill="#0f172a" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Vue 30.9%</text>
+<text x="332" y="1621" fill="#0f172a" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Python 25.5%</text>
 <circle cx="84" cy="1646" r="6" fill="#4D7C0F"/>
-<text x="98" y="1651" fill="#0f172a" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Java 11.8%</text>
+<text x="98" y="1651" fill="#0f172a" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Vue 24.6%</text>
 <circle cx="318" cy="1646" r="6" fill="#BE123C"/>
-<text x="332" y="1651" fill="#0f172a" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">JavaScript 2.5%</text>
+<text x="332" y="1651" fill="#0f172a" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Java 4.0%</text>
 <circle cx="84" cy="1676" r="6" fill="#1D4ED8"/>
-<text x="98" y="1681" fill="#0f172a" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">HTML 0.4%</text>
+<text x="98" y="1681" fill="#0f172a" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">HTML 2.9%</text>
 <circle cx="318" cy="1676" r="6" fill="#A16207"/>
-<text x="332" y="1681" fill="#0f172a" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">CSS 0.3%</text>
-<text x="604" y="1318" fill="#0f172a" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">Python</text>
+<text x="332" y="1681" fill="#0f172a" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">JavaScript 1.4%</text>
+<text x="604" y="1318" fill="#0f172a" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">TypeScript</text>
 <rect x="774" y="1302" width="328" height="18" rx="9" fill="#ffffff" stroke="#cbd5e1"/>
-<rect x="774" y="1302" width="177" height="18" rx="9" fill="#0369A1" opacity="0.95"><animate attributeName="width" values="8;177" dur="2.20s" repeatCount="1" fill="freeze"/></rect>
-<text x="1126" y="1318" text-anchor="end" fill="#0ea5e9" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">54.1%</text>
-<text x="604" y="1352" fill="#0f172a" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">Vue</text>
+<rect x="774" y="1302" width="129" height="18" rx="9" fill="#0369A1" opacity="0.95"><animate attributeName="width" values="8;129" dur="2.20s" repeatCount="1" fill="freeze"/></rect>
+<text x="1126" y="1318" text-anchor="end" fill="#0ea5e9" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">39.5%</text>
+<text x="604" y="1352" fill="#0f172a" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">Python</text>
 <rect x="774" y="1336" width="328" height="18" rx="9" fill="#ffffff" stroke="#cbd5e1"/>
-<rect x="774" y="1336" width="101" height="18" rx="9" fill="#C2410C" opacity="0.95"><animate attributeName="width" values="8;101" dur="2.45s" repeatCount="1" fill="freeze"/></rect>
-<text x="1126" y="1352" text-anchor="end" fill="#0ea5e9" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">30.9%</text>
-<text x="604" y="1386" fill="#0f172a" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">Java</text>
+<rect x="774" y="1336" width="83" height="18" rx="9" fill="#C2410C" opacity="0.95"><animate attributeName="width" values="8;83" dur="2.45s" repeatCount="1" fill="freeze"/></rect>
+<text x="1126" y="1352" text-anchor="end" fill="#0ea5e9" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">25.5%</text>
+<text x="604" y="1386" fill="#0f172a" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">Vue</text>
 <rect x="774" y="1370" width="328" height="18" rx="9" fill="#ffffff" stroke="#cbd5e1"/>
-<rect x="774" y="1370" width="38" height="18" rx="9" fill="#4D7C0F" opacity="0.95"><animate attributeName="width" values="8;38" dur="2.70s" repeatCount="1" fill="freeze"/></rect>
-<text x="1126" y="1386" text-anchor="end" fill="#0ea5e9" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">11.8%</text>
-<text x="604" y="1420" fill="#0f172a" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">JavaScript</text>
+<rect x="774" y="1370" width="80" height="18" rx="9" fill="#4D7C0F" opacity="0.95"><animate attributeName="width" values="8;80" dur="2.70s" repeatCount="1" fill="freeze"/></rect>
+<text x="1126" y="1386" text-anchor="end" fill="#0ea5e9" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">24.6%</text>
+<text x="604" y="1420" fill="#0f172a" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">Java</text>
 <rect x="774" y="1404" width="328" height="18" rx="9" fill="#ffffff" stroke="#cbd5e1"/>
-<rect x="774" y="1404" width="8" height="18" rx="9" fill="#BE123C" opacity="0.95"><animate attributeName="width" values="8;8" dur="2.95s" repeatCount="1" fill="freeze"/></rect>
-<text x="1126" y="1420" text-anchor="end" fill="#0ea5e9" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">2.5%</text>
+<rect x="774" y="1404" width="13" height="18" rx="9" fill="#BE123C" opacity="0.95"><animate attributeName="width" values="8;13" dur="2.95s" repeatCount="1" fill="freeze"/></rect>
+<text x="1126" y="1420" text-anchor="end" fill="#0ea5e9" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">4.0%</text>
 <text x="604" y="1454" fill="#0f172a" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">HTML</text>
 <rect x="774" y="1438" width="328" height="18" rx="9" fill="#ffffff" stroke="#cbd5e1"/>
-<rect x="774" y="1438" width="6" height="18" rx="9" fill="#1D4ED8" opacity="0.95"><animate attributeName="width" values="8;6" dur="3.20s" repeatCount="1" fill="freeze"/></rect>
-<text x="1126" y="1454" text-anchor="end" fill="#0ea5e9" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0.4%</text>
-<text x="604" y="1488" fill="#0f172a" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">CSS</text>
+<rect x="774" y="1438" width="9" height="18" rx="9" fill="#1D4ED8" opacity="0.95"><animate attributeName="width" values="8;9" dur="3.20s" repeatCount="1" fill="freeze"/></rect>
+<text x="1126" y="1454" text-anchor="end" fill="#0ea5e9" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">2.9%</text>
+<text x="604" y="1488" fill="#0f172a" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">JavaScript</text>
 <rect x="774" y="1472" width="328" height="18" rx="9" fill="#ffffff" stroke="#cbd5e1"/>
 <rect x="774" y="1472" width="6" height="18" rx="9" fill="#A16207" opacity="0.95"><animate attributeName="width" values="8;6" dur="3.45s" repeatCount="1" fill="freeze"/></rect>
-<text x="1126" y="1488" text-anchor="end" fill="#0ea5e9" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0.3%</text>
-<text x="598" y="1682" fill="#334155" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Private repos: 0 | Non-fork repos scanned: 13</text>
+<text x="1126" y="1488" text-anchor="end" fill="#0ea5e9" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">1.4%</text>
+<text x="604" y="1522" fill="#0f172a" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">CSS</text>
+<rect x="774" y="1506" width="328" height="18" rx="9" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="774" y="1506" width="6" height="18" rx="9" fill="#047857" opacity="0.95"><animate attributeName="width" values="8;6" dur="3.70s" repeatCount="1" fill="freeze"/></rect>
+<text x="1126" y="1522" text-anchor="end" fill="#0ea5e9" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">1.3%</text>
+<text x="604" y="1556" fill="#0f172a" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">PLpgSQL</text>
+<rect x="774" y="1540" width="328" height="18" rx="9" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="774" y="1540" width="6" height="18" rx="9" fill="#7E22CE" opacity="0.95"><animate attributeName="width" values="8;6" dur="3.95s" repeatCount="1" fill="freeze"/></rect>
+<text x="1126" y="1556" text-anchor="end" fill="#0ea5e9" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0.6%</text>
+<text x="604" y="1590" fill="#0f172a" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">Shell</text>
+<rect x="774" y="1574" width="328" height="18" rx="9" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="774" y="1574" width="6" height="18" rx="9" fill="#E11D48" opacity="0.95"><animate attributeName="width" values="8;6" dur="4.20s" repeatCount="1" fill="freeze"/></rect>
+<text x="1126" y="1590" text-anchor="end" fill="#0ea5e9" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0.1%</text>
+<text x="604" y="1624" fill="#0f172a" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">Other</text>
+<rect x="774" y="1608" width="328" height="18" rx="9" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="774" y="1608" width="6" height="18" rx="9" fill="#0F766E" opacity="0.95"><animate attributeName="width" values="8;6" dur="4.45s" repeatCount="1" fill="freeze"/></rect>
+<text x="1126" y="1624" text-anchor="end" fill="#0ea5e9" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0.1%</text>
+<text x="598" y="1682" fill="#334155" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Private repos: 0 | Non-fork repos scanned: 23</text>
 <rect x="32" y="1758" width="1136" height="808" rx="24" fill="#ffffff" stroke="#cbd5e1"/>
 <text x="56" y="1802" fill="#0f172a" font-size="30" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="700">Repository Pulse</text>
 <text x="56" y="1828" fill="#334155" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">Contribution rhythm and curated repository highlights.</text>
@@ -195,40 +215,40 @@
 <circle cx="572" cy="1874" r="5" fill="#0ea5e9"/>
 <rect x="608" y="1852" width="258" height="92" rx="16" fill="#f8fafc" stroke="#cbd5e1"/>
 <text x="624" y="1882" fill="#334155" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Active 30d</text>
-<text x="624" y="1918" fill="#0f172a" font-size="30" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="700">2</text>
+<text x="624" y="1918" fill="#0f172a" font-size="30" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="700">7</text>
 <circle cx="848" cy="1874" r="5" fill="#16a34a"/>
 <rect x="884" y="1852" width="258" height="92" rx="16" fill="#f8fafc" stroke="#cbd5e1"/>
 <text x="900" y="1882" fill="#334155" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Public Repositories</text>
 <text x="900" y="1918" fill="#0f172a" font-size="30" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="700">13</text>
 <circle cx="1124" cy="1874" r="5" fill="#0f766e"/>
 <rect x="56" y="1964" width="1088" height="220" rx="16" fill="#f8fafc" stroke="#cbd5e1"/>
-<path d="M 84.00 2148.00  L 84.00 2068.00 L 177.82 2148.00 L 271.64 2068.00 L 365.45 2068.00 L 459.27 2148.00 L 553.09 2148.00 L 646.91 2148.00 L 740.73 2148.00 L 834.55 2148.00 L 928.36 2148.00 L 1022.18 2148.00 L 1116.00 1988.00 L 1116.00 2148.00 Z" fill="#0ea5e9" fill-opacity="0.18"/>
-<path d="M 84.00 2068.00 L 177.82 2148.00 L 271.64 2068.00 L 365.45 2068.00 L 459.27 2148.00 L 553.09 2148.00 L 646.91 2148.00 L 740.73 2148.00 L 834.55 2148.00 L 928.36 2148.00 L 1022.18 2148.00 L 1116.00 1988.00" fill="none" stroke="#0284c7" stroke-width="4" stroke-dasharray="12 8"><animate attributeName="stroke-dashoffset" values="0;-200" dur="7s" repeatCount="indefinite"/></path>
-<circle cx="84.00" cy="2068.00" r="4" fill="#0ea5e9"/>
+<path d="M 84.00 2148.00  L 84.00 2125.14 L 177.82 2148.00 L 271.64 2125.14 L 365.45 2125.14 L 459.27 2148.00 L 553.09 2148.00 L 646.91 2125.14 L 740.73 2125.14 L 834.55 2148.00 L 928.36 2125.14 L 1022.18 2148.00 L 1116.00 1988.00 L 1116.00 2148.00 Z" fill="#0ea5e9" fill-opacity="0.18"/>
+<path d="M 84.00 2125.14 L 177.82 2148.00 L 271.64 2125.14 L 365.45 2125.14 L 459.27 2148.00 L 553.09 2148.00 L 646.91 2125.14 L 740.73 2125.14 L 834.55 2148.00 L 928.36 2125.14 L 1022.18 2148.00 L 1116.00 1988.00" fill="none" stroke="#0284c7" stroke-width="4" stroke-dasharray="12 8"><animate attributeName="stroke-dashoffset" values="0;-200" dur="7s" repeatCount="indefinite"/></path>
+<circle cx="84.00" cy="2125.14" r="4" fill="#0ea5e9"/>
 <text x="84.00" y="2170" text-anchor="middle" fill="#334155" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Apr</text>
 <circle cx="177.82" cy="2148.00" r="4" fill="#0ea5e9"/>
 <text x="177.82" y="2170" text-anchor="middle" fill="#334155" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">May</text>
-<circle cx="271.64" cy="2068.00" r="4" fill="#0ea5e9"/>
+<circle cx="271.64" cy="2125.14" r="4" fill="#0ea5e9"/>
 <text x="271.64" y="2170" text-anchor="middle" fill="#334155" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Jun</text>
-<circle cx="365.45" cy="2068.00" r="4" fill="#0ea5e9"/>
+<circle cx="365.45" cy="2125.14" r="4" fill="#0ea5e9"/>
 <text x="365.45" y="2170" text-anchor="middle" fill="#334155" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Jul</text>
 <circle cx="459.27" cy="2148.00" r="4" fill="#0ea5e9"/>
 <text x="459.27" y="2170" text-anchor="middle" fill="#334155" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Aug</text>
 <circle cx="553.09" cy="2148.00" r="4" fill="#0ea5e9"/>
 <text x="553.09" y="2170" text-anchor="middle" fill="#334155" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Sep</text>
-<circle cx="646.91" cy="2148.00" r="4" fill="#0ea5e9"/>
+<circle cx="646.91" cy="2125.14" r="4" fill="#0ea5e9"/>
 <text x="646.91" y="2170" text-anchor="middle" fill="#334155" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Oct</text>
-<circle cx="740.73" cy="2148.00" r="4" fill="#0ea5e9"/>
+<circle cx="740.73" cy="2125.14" r="4" fill="#0ea5e9"/>
 <text x="740.73" y="2170" text-anchor="middle" fill="#334155" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Nov</text>
 <circle cx="834.55" cy="2148.00" r="4" fill="#0ea5e9"/>
 <text x="834.55" y="2170" text-anchor="middle" fill="#334155" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Dec</text>
-<circle cx="928.36" cy="2148.00" r="4" fill="#0ea5e9"/>
+<circle cx="928.36" cy="2125.14" r="4" fill="#0ea5e9"/>
 <text x="928.36" y="2170" text-anchor="middle" fill="#334155" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Jan</text>
 <circle cx="1022.18" cy="2148.00" r="4" fill="#0ea5e9"/>
 <text x="1022.18" y="2170" text-anchor="middle" fill="#334155" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Feb</text>
 <circle cx="1116.00" cy="1988.00" r="4" fill="#0ea5e9"/>
 <text x="1116.00" y="2170" text-anchor="middle" fill="#334155" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Mar</text>
-<circle cx="84.00" cy="2068.00" r="6" fill="#0284c7" filter="url(#glow)"><animateMotion dur="7s" repeatCount="indefinite" path="M 84.00 2068.00 L 177.82 2148.00 L 271.64 2068.00 L 365.45 2068.00 L 459.27 2148.00 L 553.09 2148.00 L 646.91 2148.00 L 740.73 2148.00 L 834.55 2148.00 L 928.36 2148.00 L 1022.18 2148.00 L 1116.00 1988.00"/></circle>
+<circle cx="84.00" cy="2125.14" r="6" fill="#0284c7" filter="url(#glow)"><animateMotion dur="7s" repeatCount="indefinite" path="M 84.00 2125.14 L 177.82 2148.00 L 271.64 2125.14 L 365.45 2125.14 L 459.27 2148.00 L 553.09 2148.00 L 646.91 2125.14 L 740.73 2125.14 L 834.55 2148.00 L 928.36 2125.14 L 1022.18 2148.00 L 1116.00 1988.00"/></circle>
 <text x="56" y="2224" fill="#0f172a" font-size="22" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="700">Featured Projects</text>
 <line x1="56" y1="2256" x2="1144" y2="2256" stroke="#cbd5e1"/>
 <text x="60" y="2244" fill="#334155" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Repository</text>
@@ -254,21 +274,21 @@
 <text x="972" y="2378" fill="#0f172a" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0</text>
 <text x="1082" y="2378" fill="#0f172a" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0</text>
 <line x1="56" y1="2442" x2="1144" y2="2442" stroke="#cbd5e1" stroke-opacity="0.55"/>
-<text x="60" y="2426" fill="#0f172a" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="600">GOOGLEADS-AUTO</text>
+<text x="60" y="2426" fill="#0f172a" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="600">mailhub</text>
 <text x="60" y="2444" fill="#334155" font-size="14" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">No description</text>
 <text x="792" y="2426" fill="#0ea5e9" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Other</text>
 <text x="972" y="2426" fill="#0f172a" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0</text>
 <text x="1082" y="2426" fill="#0f172a" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0</text>
 <line x1="56" y1="2490" x2="1144" y2="2490" stroke="#cbd5e1" stroke-opacity="0.55"/>
-<text x="60" y="2474" fill="#0f172a" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="600">face-glasses</text>
+<text x="60" y="2474" fill="#0f172a" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="600">H</text>
 <text x="60" y="2492" fill="#334155" font-size="14" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">No description</text>
-<text x="792" y="2474" fill="#0ea5e9" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Vue</text>
+<text x="792" y="2474" fill="#0ea5e9" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Python</text>
 <text x="972" y="2474" fill="#0f172a" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0</text>
 <text x="1082" y="2474" fill="#0f172a" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0</text>
 <line x1="56" y1="2538" x2="1144" y2="2538" stroke="#cbd5e1" stroke-opacity="0.55"/>
-<text x="60" y="2522" fill="#0f172a" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="600">HTooL</text>
+<text x="60" y="2522" fill="#0f172a" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="600">Hoer</text>
 <text x="60" y="2540" fill="#334155" font-size="14" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">No description</text>
-<text x="792" y="2522" fill="#0ea5e9" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Vue</text>
+<text x="792" y="2522" fill="#0ea5e9" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">TypeScript</text>
 <text x="972" y="2522" fill="#0f172a" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0</text>
 <text x="1082" y="2522" fill="#0f172a" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0</text>
 <rect x="32" y="2584" width="1136" height="96" rx="20" fill="#f8fafc" stroke="#cbd5e1"/>
