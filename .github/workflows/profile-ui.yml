@@ -1,6 +1,9 @@
 name: Update Profile Experience
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: "17 2 * * *"
   workflow_dispatch:
@@ -33,15 +36,18 @@ jobs:
       - name: Generate profile experience SVG
         env:
           PROFILE_STATS_PAT: ${{ secrets.PROFILE_STATS_PAT }}
-          FALLBACK_GITHUB_TOKEN: ${{ github.token }}
         run: |
-          export GH_TOKEN="${PROFILE_STATS_PAT:-$FALLBACK_GITHUB_TOKEN}"
+          if [ -z "${PROFILE_STATS_PAT}" ]; then
+            echo "PROFILE_STATS_PAT is required but missing."
+            exit 1
+          fi
+          export GH_TOKEN="${PROFILE_STATS_PAT}"
           python scripts/generate_profile_ui.py \
             --username Hughhhhcoder \
             --output-dir assets \
             --config profile.config.json \
-            --include-forks \
             --include-private \
+            --require-private-data \
             --motion immersive
 
       - name: Validate generated assets

@@ -85,7 +85,21 @@ THEMES = {
         "danger": "#fb7185",
         "grid": "#0ea5e9",
         "scan": "#22d3ee",
-        "bars": ["#22d3ee", "#38bdf8", "#14b8a6", "#2dd4bf", "#60a5fa", "#0ea5e9", "#67e8f9", "#10b981"],
+        # High-contrast language palette for donut + bars (top10)
+        "bars": [
+            "#22D3EE",
+            "#F97316",
+            "#A3E635",
+            "#F43F5E",
+            "#60A5FA",
+            "#EAB308",
+            "#34D399",
+            "#C084FC",
+            "#FB7185",
+            "#10B981",
+            "#0EA5E9",
+            "#F59E0B",
+        ],
     },
     "light": {
         "bg0": "#f8fafc",
@@ -104,7 +118,20 @@ THEMES = {
         "danger": "#be123c",
         "grid": "#93c5fd",
         "scan": "#0ea5e9",
-        "bars": ["#0284c7", "#0ea5e9", "#0f766e", "#14b8a6", "#2563eb", "#38bdf8", "#22c55e", "#0891b2"],
+        "bars": [
+            "#0369A1",
+            "#C2410C",
+            "#4D7C0F",
+            "#BE123C",
+            "#1D4ED8",
+            "#A16207",
+            "#047857",
+            "#7E22CE",
+            "#E11D48",
+            "#0F766E",
+            "#2563EB",
+            "#B45309",
+        ],
     },
 }
 
@@ -224,9 +251,11 @@ class Snapshot:
     bio: str
     followers: int
     following: int
-    public_repos: int
+    official_public_repos: int
+    official_total_repos: int
+    official_private_repos: int
     scanned_repos: int
-    private_repos: int
+    scanned_private_repos: int
     stars: int
     forks: int
     active_30d: int
@@ -288,6 +317,31 @@ def arc_path(cx: float, cy: float, r: float, start_deg: float, sweep_deg: float)
     return (
         f"M {x0:.2f} {y0:.2f} "
         f"A {r:.2f} {r:.2f} 0 {large_arc} 1 {x1:.2f} {y1:.2f}"
+    )
+
+
+def ring_segment_path(
+    cx: float,
+    cy: float,
+    outer_r: float,
+    inner_r: float,
+    start_deg: float,
+    sweep_deg: float,
+) -> str:
+    start_outer_x = cx + outer_r * math.cos(math.radians(start_deg))
+    start_outer_y = cy + outer_r * math.sin(math.radians(start_deg))
+    end_outer_x = cx + outer_r * math.cos(math.radians(start_deg + sweep_deg))
+    end_outer_y = cy + outer_r * math.sin(math.radians(start_deg + sweep_deg))
+    end_inner_x = cx + inner_r * math.cos(math.radians(start_deg + sweep_deg))
+    end_inner_y = cy + inner_r * math.sin(math.radians(start_deg + sweep_deg))
+    start_inner_x = cx + inner_r * math.cos(math.radians(start_deg))
+    start_inner_y = cy + inner_r * math.sin(math.radians(start_deg))
+    large_arc = 1 if sweep_deg > 180 else 0
+    return (
+        f"M {start_outer_x:.2f} {start_outer_y:.2f} "
+        f"A {outer_r:.2f} {outer_r:.2f} 0 {large_arc} 1 {end_outer_x:.2f} {end_outer_y:.2f} "
+        f"L {end_inner_x:.2f} {end_inner_y:.2f} "
+        f"A {inner_r:.2f} {inner_r:.2f} 0 {large_arc} 0 {start_inner_x:.2f} {start_inner_y:.2f} Z"
     )
 
 
@@ -354,7 +408,23 @@ def load_config(path: Path) -> dict:
     return config
 
 
-def fetch_user(username: str, token: str | None, warnings: List[str]) -> dict:
+def int_or_zero(value: object) -> int:
+    try:
+        return int(value)  # type: ignore[arg-type]
+    except (TypeError, ValueError):
+        return 0
+
+
+def classify_private_access_error(exc: Exception) -> str:
+    message = str(exc)
+    if "HTTP 401" in message:
+        return "PROFILE_STATS_PAT is invalid or expired (HTTP 401)."
+    if "HTTP 403" in message:
+        return "PROFILE_STATS_PAT does not have enough permission to read private repository data (HTTP 403)."
+    return f"Unable to read private repository data: {message}"
+
+
+def fetch_public_user(username: str, token: str | None, warnings: List[str]) -> dict:
     data = safe_json(f"{API_BASE}/users/{username}", token, warnings)
     if isinstance(data, dict):
         return data
@@ -367,16 +437,47 @@ def fetch_user(username: str, token: str | None, warnings: List[str]) -> dict:
     }
 
 
+def fetch_authenticated_user(username: str, token: str) -> dict:
+    payload = request_json(f"{API_BASE}/user", token)
+    if not isinstance(payload, dict):
+        raise RuntimeError("Authenticated user response is invalid.")
+    token_login = str(payload.get("login") or "").lower()
+    if token_login != username.lower():
+        raise RuntimeError(
+            f"PROFILE_STATS_PAT belongs to @{token_login or 'unknown'}, expected @{username.lower()}."
+        )
+    return payload
+
+
+def official_repo_totals(public_user: dict, auth_user: dict | None) -> Tuple[int, int, int]:
+    base = auth_user if auth_user is not None else public_user
+    public_repos = int_or_zero(base.get("public_repos"))
+    private_repos = 0
+    if auth_user is not None:
+        private_repos = int_or_zero(auth_user.get("owned_private_repos"))
+        if private_repos <= 0:
+            private_repos = int_or_zero(auth_user.get("total_private_repos"))
+    total_repos = public_repos + private_repos
+    return public_repos, private_repos, total_repos
+
+
 def fetch_repositories(
     username: str,
     token: str | None,
     include_private: bool,
+    require_private_data: bool,
     warnings: List[str],
 ) -> Tuple[List[dict], str]:
     repos: List[dict] = []
     page = 1
     using_private = bool(include_private and token)
-    data_mode = "public-only"
+    used_private_endpoint = False
+
+    if include_private and not token:
+        if require_private_data:
+            raise RuntimeError("PROFILE_STATS_PAT is required but missing.")
+        warnings.append("Private repository mode disabled because no token was provided.")
+        using_private = False
 
     while True:
         if using_private:
@@ -384,20 +485,26 @@ def fetch_repositories(
                 f"{API_BASE}/user/repos"
                 f"?per_page=100&page={page}&visibility=all&affiliation=owner&sort=updated"
             )
+            used_private_endpoint = True
+            try:
+                payload = request_json(url, token)
+            except Exception as exc:  # pylint: disable=broad-except
+                if require_private_data:
+                    raise RuntimeError(classify_private_access_error(exc)) from exc
+                if page == 1:
+                    warnings.append(classify_private_access_error(exc))
+                    repos.clear()
+                    using_private = False
+                    used_private_endpoint = False
+                    page = 1
+                    continue
+                break
         else:
             url = (
                 f"{API_BASE}/users/{username}/repos"
                 f"?per_page=100&page={page}&type=owner&sort=updated"
             )
-
-        payload = safe_json(url, token, warnings)
-
-        if using_private and page == 1 and not isinstance(payload, list):
-            using_private = False
-            data_mode = "public-only"
-            page = 1
-            repos.clear()
-            continue
+            payload = safe_json(url, token, warnings)
 
         if not isinstance(payload, list) or not payload:
             break
@@ -414,11 +521,11 @@ def fetch_repositories(
             break
         page += 1
 
-    if using_private:
-        data_mode = "public+private"
-    elif include_private and not token:
-        data_mode = "public-only (no PROFILE_STATS_PAT)"
-    return repos, data_mode
+    if used_private_endpoint:
+        return repos, "public+private"
+    if include_private:
+        return repos, "public-only (private-data-unavailable)"
+    return repos, "public-only"
 
 
 def collect_repos(
@@ -426,6 +533,7 @@ def collect_repos(
     repos_raw: Sequence[dict],
     token: str | None,
     include_forks: bool,
+    strict_languages: bool,
     warnings: List[str],
 ) -> List[Repo]:
     repos: List[Repo] = []
@@ -439,26 +547,32 @@ def collect_repos(
 
         languages: Dict[str, int] = {}
         languages_url = raw.get("languages_url")
-        if isinstance(languages_url, str) and languages_url:
-            lang_payload = safe_json(languages_url, token, warnings)
-            if isinstance(lang_payload, dict):
-                for lang, value in lang_payload.items():
+        if not isinstance(languages_url, str) or not languages_url:
+            if strict_languages:
+                raise RuntimeError(f"Repository '{raw.get('name')}' missing languages_url.")
+        else:
+            if strict_languages:
+                payload = request_json(languages_url, token)
+            else:
+                payload = safe_json(languages_url, token, warnings)
+
+            if payload is None and strict_languages:
+                raise RuntimeError(f"Failed to fetch languages for repository '{raw.get('name')}'.")
+            if isinstance(payload, dict):
+                for lang, value in payload.items():
                     if isinstance(lang, str) and isinstance(value, int) and value > 0:
                         languages[lang] = value
-
-        primary_language = str(raw.get("language") or "Other")
-        size_kb = int(raw.get("size") or 0)
-        if not languages and primary_language:
-            languages[primary_language] = max(1, size_kb * 1024)
+            elif strict_languages:
+                raise RuntimeError(f"Invalid languages payload for repository '{raw.get('name')}'.")
 
         repos.append(
             Repo(
                 name=str(raw.get("name") or "repo"),
                 description=str(raw.get("description") or ""),
-                language=primary_language,
-                stars=int(raw.get("stargazers_count") or 0),
-                forks=int(raw.get("forks_count") or 0),
-                size_kb=size_kb,
+                language=str(raw.get("language") or "Other"),
+                stars=int_or_zero(raw.get("stargazers_count")),
+                forks=int_or_zero(raw.get("forks_count")),
+                size_kb=int_or_zero(raw.get("size")),
                 pushed_at=parse_iso(raw.get("pushed_at")),
                 private=bool(raw.get("private", False)),
                 html_url=str(raw.get("html_url") or ""),
@@ -478,16 +592,18 @@ def aggregate_languages(repos: Iterable[Repo]) -> Dict[str, int]:
     return totals
 
 
-def build_language_rows(totals: Dict[str, int], max_rows: int = 8) -> Tuple[List[Tuple[str, int, float]], int]:
+def build_language_rows(totals: Dict[str, int], max_rows: int = 10) -> Tuple[List[Tuple[str, int, float]], int]:
     total_bytes = sum(totals.values())
     if total_bytes <= 0:
         return [], 0
 
     ranked = sorted(totals.items(), key=lambda kv: kv[1], reverse=True)
-    head = ranked[:max_rows]
     if len(ranked) > max_rows:
-        other = sum(value for _, value in ranked[max_rows:])
+        head = ranked[: max_rows - 1]
+        other = sum(value for _, value in ranked[max_rows - 1 :])
         head.append(("Other", other))
+    else:
+        head = ranked
 
     rows = [(name, value, (value / total_bytes) * 100.0) for name, value in head]
     return rows, total_bytes
@@ -570,6 +686,9 @@ def build_snapshot(
     config: dict,
     user: dict,
     repos: Sequence[Repo],
+    official_public_repos: int,
+    official_private_repos: int,
+    official_total_repos: int,
     data_mode: str,
     warnings: List[str],
 ) -> Snapshot:
@@ -578,7 +697,7 @@ def build_snapshot(
 
     stars = sum(r.stars for r in repos)
     forks = sum(r.forks for r in repos)
-    private_repos = sum(1 for r in repos if r.private)
+    private_repos_scanned = sum(1 for r in repos if r.private)
     active_30d = sum(1 for r in repos if r.pushed_at and r.pushed_at >= cutoff)
 
     language_totals = aggregate_languages(repos)
@@ -599,11 +718,11 @@ def build_snapshot(
     tech_stack = resolve_tech(config.get("core_tech", []), repos, language_totals)
     ai_platforms = resolve_ai_platforms(config.get("ai_platforms", []))
 
-    status_note = "Data source: public repositories only."
+    status_note = "Data source: official totals + non-fork language aggregation."
     if data_mode == "public+private":
-        status_note = "Data source: public + private repositories (owner scope)."
-    elif "PROFILE_STATS_PAT" in data_mode:
-        status_note = "Data source: public repositories only (PROFILE_STATS_PAT not configured)."
+        status_note += " Private data enabled."
+    elif "private-data-unavailable" in data_mode:
+        status_note += " Private data unavailable."
     if warnings:
         status_note += f" Diagnostics: {warnings[0][:110]}"
 
@@ -616,9 +735,11 @@ def build_snapshot(
         bio=bio,
         followers=int(user.get("followers") or 0),
         following=int(user.get("following") or 0),
-        public_repos=int(user.get("public_repos") or 0),
+        official_public_repos=official_public_repos,
+        official_total_repos=official_total_repos,
+        official_private_repos=official_private_repos,
         scanned_repos=len(repos),
-        private_repos=private_repos,
+        scanned_private_repos=private_repos_scanned,
         stars=stars,
         forks=forks,
         active_30d=active_30d,
@@ -804,8 +925,8 @@ def render_experience(snapshot: Snapshot, config: dict, theme_name: str, motion_
     chip_gap = 14
     chips = [
         ("Followers", str(snapshot.followers), theme["accent"]),
-        ("Repositories", str(snapshot.scanned_repos), theme["accent2"]),
-        ("Private Included", str(snapshot.private_repos), theme["accent3"]),
+        ("Total Repos", str(snapshot.official_total_repos), theme["accent2"]),
+        ("Private Repos", str(snapshot.official_private_repos), theme["accent3"]),
         ("Updated", snapshot.generated_at.strftime("%Y-%m-%d"), theme["good"]),
     ]
     for idx, (label, value, color) in enumerate(chips):
@@ -879,24 +1000,37 @@ def render_experience(snapshot: Snapshot, config: dict, theme_name: str, motion_
 
     donut_cx = left_x + 250
     donut_cy = left_y + 195
-    donut_r = 135
-    donut_sw = 42
+    donut_outer_r = 135
+    donut_inner_r = 93
+    donut_thickness = donut_outer_r - donut_inner_r
     lines.append(
-        f'<circle cx="{donut_cx}" cy="{donut_cy}" r="{donut_r}" fill="none" stroke="{theme["stroke"]}" stroke-width="{donut_sw}"/>'
+        f'<circle cx="{donut_cx}" cy="{donut_cy}" r="{donut_outer_r}" fill="none" stroke="{theme["stroke"]}" stroke-width="{donut_thickness}" opacity="0.42"/>'
+    )
+    lines.append(
+        f'<circle cx="{donut_cx}" cy="{donut_cy}" r="{donut_outer_r + 6}" fill="none" stroke="{theme["accent2"]}" stroke-width="1.2" opacity="0.25"/>'
     )
 
     angle = -90.0
     language_rows = snapshot.language_rows if snapshot.language_rows else [("No Data", 1, 100.0)]
-    for idx, (lang, _bytes, pct) in enumerate(language_rows[:9]):
-        sweep = max(1.2, pct / 100.0 * 360.0)
-        path = arc_path(donut_cx, donut_cy, donut_r, angle, sweep)
+    for idx, (lang, _bytes, pct) in enumerate(language_rows[:10]):
+        sweep = max(0.8, pct / 100.0 * 360.0)
+        path = ring_segment_path(
+            donut_cx,
+            donut_cy,
+            donut_outer_r,
+            donut_inner_r,
+            angle,
+            sweep,
+        )
         color = theme["bars"][idx % len(theme["bars"])]
         lines.append(
-            f'<path d="{path}" fill="none" stroke="{color}" stroke-width="{donut_sw}" stroke-linecap="round" filter="url(#glow)"/>'
+            f'<path d="{path}" fill="{color}" opacity="0.94"/>'
         )
         angle += sweep
 
-    lines.append(f'<circle cx="{donut_cx}" cy="{donut_cy}" r="90" fill="{theme["panel"]}" stroke="{theme["stroke"]}"/>')
+    lines.append(
+        f'<circle cx="{donut_cx}" cy="{donut_cy}" r="{donut_inner_r - 8}" fill="{theme["panel"]}" stroke="{theme["stroke"]}"/>'
+    )
     lines.append(
         f'<text x="{donut_cx}" y="{donut_cy - 8}" text-anchor="middle" fill="{theme["muted"]}" font-size="14" font-family="{DESIGN_TOKENS["font"]["mono"]}">Total Code</text>'
     )
@@ -916,34 +1050,39 @@ def render_experience(snapshot: Snapshot, config: dict, theme_name: str, motion_
             f'<text x="{lx + 14}" y="{ly + 5}" fill="{theme["text"]}" font-size="14" font-family="{DESIGN_TOKENS["font"]["mono"]}">{esc(lang)} {pct:.1f}%</text>'
         )
 
-    bar_start_y = right_y + 38
-    bar_track_w = right_w - 220
-    for idx, (lang, _bytes, pct) in enumerate(language_rows[:8]):
-        by = bar_start_y + idx * 48
+    bar_start_y = right_y + 28
+    row_step = 34
+    label_x = right_x + 28
+    bar_x = right_x + 198
+    pct_x = right_x + right_w - 18
+    bar_track_w = max(120, pct_x - bar_x - 24)
+
+    for idx, (lang, _bytes, pct) in enumerate(language_rows[:10]):
+        by = bar_start_y + idx * row_step
         color = theme["bars"][idx % len(theme["bars"])]
-        fill_w = max(14, int(bar_track_w * (pct / 100.0)))
+        fill_w = max(6, int(bar_track_w * (pct / 100.0)))
         lines.append(
-            f'<text x="{right_x + 22}" y="{by + 18}" fill="{theme["text"]}" font-size="16" font-family="{DESIGN_TOKENS["font"]["display"]}">{esc(lang)}</text>'
+            f'<text x="{label_x}" y="{by + 18}" fill="{theme["text"]}" font-size="16" font-family="{DESIGN_TOKENS["font"]["display"]}">{esc(lang)}</text>'
         )
         lines.append(
-            f'<rect x="{right_x + 196}" y="{by + 2}" width="{bar_track_w}" height="18" rx="9" fill="{theme["panel"]}" stroke="{theme["stroke"]}"/>'
+            f'<rect x="{bar_x}" y="{by + 2}" width="{bar_track_w}" height="18" rx="9" fill="{theme["panel"]}" stroke="{theme["stroke"]}"/>'
         )
         if motion["line_pulse"]:
             lines.append(
-                f'<rect x="{right_x + 196}" y="{by + 2}" width="{fill_w}" height="18" rx="9" fill="{color}" opacity="0.92">'
+                f'<rect x="{bar_x}" y="{by + 2}" width="{fill_w}" height="18" rx="9" fill="{color}" opacity="0.95">'
                 f'<animate attributeName="width" values="8;{fill_w}" dur="{2.2 + idx * 0.25:.2f}s" repeatCount="1" fill="freeze"/>'
                 "</rect>"
             )
         else:
             lines.append(
-                f'<rect x="{right_x + 196}" y="{by + 2}" width="{fill_w}" height="18" rx="9" fill="{color}" opacity="0.92"/>'
+                f'<rect x="{bar_x}" y="{by + 2}" width="{fill_w}" height="18" rx="9" fill="{color}" opacity="0.95"/>'
             )
         lines.append(
-            f'<text x="{right_x + 196 + bar_track_w + 16}" y="{by + 18}" fill="{theme["accent2"]}" font-size="16" font-family="{DESIGN_TOKENS["font"]["mono"]}">{pct:5.2f}%</text>'
+            f'<text x="{pct_x}" y="{by + 18}" text-anchor="end" fill="{theme["accent2"]}" font-size="16" font-family="{DESIGN_TOKENS["font"]["mono"]}">{pct:.1f}%</text>'
         )
 
     lines.append(
-        f'<text x="{right_x + 22}" y="{right_y + right_h - 26}" fill="{theme["muted"]}" font-size="14" font-family="{DESIGN_TOKENS["font"]["mono"]}">Private repositories counted: {snapshot.private_repos}</text>'
+        f'<text x="{right_x + 22}" y="{right_y + right_h - 26}" fill="{theme["muted"]}" font-size="14" font-family="{DESIGN_TOKENS["font"]["mono"]}">Private repos: {snapshot.official_private_repos} | Non-fork repos scanned: {snapshot.scanned_repos}</text>'
     )
 
     # Repository pulse section
@@ -961,7 +1100,7 @@ def render_experience(snapshot: Snapshot, config: dict, theme_name: str, motion_
         ("Stars", str(snapshot.stars), theme["accent"]),
         ("Forks", str(snapshot.forks), theme["accent2"]),
         ("Active 30d", str(snapshot.active_30d), theme["good"]),
-        ("Public Repos", str(snapshot.public_repos), theme["accent3"]),
+        ("Public Repositories", str(snapshot.official_public_repos), theme["accent3"]),
     ]
     metric_y = y_repo + 94
     metric_w = int((section_w - 48 - 18 * 3) / 4)
@@ -1086,6 +1225,7 @@ def main() -> int:
     parser.add_argument("--config", default="profile.config.json")
     parser.add_argument("--include-private", action="store_true")
     parser.add_argument("--include-forks", action="store_true")
+    parser.add_argument("--require-private-data", action="store_true")
     parser.add_argument("--motion", choices=["minimal", "balanced", "immersive"])
     args = parser.parse_args()
 
@@ -1097,13 +1237,31 @@ def main() -> int:
         motion_level = "immersive"
 
     token = os.getenv("GH_TOKEN") or os.getenv("PROFILE_STATS_PAT") or os.getenv("GITHUB_TOKEN")
+    if args.require_private_data and not token:
+        raise RuntimeError("PROFILE_STATS_PAT is required but not found in environment.")
 
     warnings: List[str] = []
-    user = fetch_user(args.username, token, warnings)
+    public_user = fetch_public_user(args.username, token, warnings)
+    auth_user: dict | None = None
+    if args.include_private and token:
+        try:
+            auth_user = fetch_authenticated_user(args.username, token)
+        except Exception as exc:  # pylint: disable=broad-except
+            if args.require_private_data:
+                raise RuntimeError(classify_private_access_error(exc)) from exc
+            warnings.append(classify_private_access_error(exc))
+
+    official_public_repos, official_private_repos, official_total_repos = official_repo_totals(
+        public_user,
+        auth_user,
+    )
+    display_user = auth_user if auth_user is not None else public_user
+
     repos_raw, data_mode = fetch_repositories(
         args.username,
         token,
         include_private=args.include_private,
+        require_private_data=args.require_private_data,
         warnings=warnings,
     )
     repos = collect_repos(
@@ -1111,10 +1269,21 @@ def main() -> int:
         repos_raw,
         token,
         include_forks=args.include_forks,
+        strict_languages=args.require_private_data,
         warnings=warnings,
     )
 
-    snapshot = build_snapshot(args.username, config, user, repos, data_mode, warnings)
+    snapshot = build_snapshot(
+        args.username,
+        config,
+        display_user,
+        repos,
+        official_public_repos,
+        official_private_repos,
+        official_total_repos,
+        data_mode,
+        warnings,
+    )
 
     output_dir = root / args.output_dir
     write(output_dir / "experience-dark.svg", render_experience(snapshot, config, "dark", motion_level, root))
