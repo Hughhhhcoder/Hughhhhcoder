@@ -22,12 +22,13 @@ jobs:
 
       - name: Generate language radar SVG
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.PROFILE_STATS_PAT || secrets.GITHUB_TOKEN }}
         run: |
           python scripts/generate_language_radar.py \
             --username Hughhhhcoder \
             --output assets/language-radar.svg \
-            --include-forks
+            --include-forks \
+            --include-private
 
       - name: Commit and push if changed
         run: |

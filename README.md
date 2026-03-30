@@ -32,7 +32,7 @@
 </p>
 
 <p align="center">
-  <sub>Dual-view (donut + bars), auto-updated daily from all public repositories (including forks).</sub>
+  <sub>Dual-view (donut + bars), auto-updated daily. Private repos are included when <code>PROFILE_STATS_PAT</code> is configured.</sub>
 </p>
 
 ## /mission_log

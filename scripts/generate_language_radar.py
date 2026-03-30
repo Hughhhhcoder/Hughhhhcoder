@@ -47,20 +47,43 @@ def fetch_json(url: str, token: str | None) -> object:
         raise RuntimeError(f"Network error while requesting: {url}") from exc
 
 
-def fetch_repositories(username: str, token: str | None) -> List[dict]:
+def fetch_repositories(
+    username: str, token: str | None, include_private: bool
+) -> List[dict]:
     repos: List[dict] = []
     page = 1
     while True:
-        url = (
-            f"{API_BASE}/users/{username}/repos"
-            f"?per_page=100&page={page}&type=owner&sort=updated"
-        )
+        if include_private:
+            if not token:
+                raise RuntimeError(
+                    "include_private requires GH_TOKEN or GITHUB_TOKEN."
+                )
+            # Authenticated endpoint can include private repositories owned by the user.
+            url = (
+                f"{API_BASE}/user/repos"
+                f"?per_page=100&page={page}&visibility=all&affiliation=owner&sort=updated"
+            )
+        else:
+            url = (
+                f"{API_BASE}/users/{username}/repos"
+                f"?per_page=100&page={page}&type=owner&sort=updated"
+            )
         page_data = fetch_json(url, token)
         if not isinstance(page_data, list):
             raise RuntimeError("Unexpected response while fetching repositories.")
         if not page_data:
             break
-        repos.extend(page_data)
+        if include_private:
+            owner_repos = [
+                repo
+                for repo in page_data
+                if isinstance(repo, dict)
+                and isinstance(repo.get("owner"), dict)
+                and str(repo["owner"].get("login", "")).lower() == username.lower()
+            ]
+            repos.extend(owner_repos)
+        else:
+            repos.extend(page_data)
         if len(page_data) < 100:
             break
         page += 1
@@ -362,10 +385,19 @@ def main() -> int:
         action="store_true",
         help="Include forked repositories in aggregation",
     )
+    parser.add_argument(
+        "--include-private",
+        action="store_true",
+        help="Include private repositories accessible by the token owner",
+    )
     args = parser.parse_args()
 
     token = os.getenv("GH_TOKEN") or os.getenv("GITHUB_TOKEN")
-    repos = fetch_repositories(args.username, token)
+    repos = fetch_repositories(
+        username=args.username,
+        token=token,
+        include_private=args.include_private,
+    )
     totals, repo_count = aggregate_languages(repos, token, args.include_forks)
     rows, total_bytes = build_language_rows(totals, max_rows=args.max_rows)
     svg = render_svg(
