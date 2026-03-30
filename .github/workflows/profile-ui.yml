@@ -1,4 +1,4 @@
-name: Update Profile UI
+name: Update Profile Experience
 
 on:
   schedule:
@@ -8,19 +8,29 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: profile-ui-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Generate profile SVG assets
+      - name: Generate local logo assets
+        run: |
+          python scripts/generate_logo_assets.py
+
+      - name: Generate profile experience SVG
         env:
           PROFILE_STATS_PAT: ${{ secrets.PROFILE_STATS_PAT }}
           FALLBACK_GITHUB_TOKEN: ${{ github.token }}
@@ -29,8 +39,15 @@ jobs:
           python scripts/generate_profile_ui.py \
             --username Hughhhhcoder \
             --output-dir assets \
+            --config profile.config.json \
             --include-forks \
-            --include-private
+            --include-private \
+            --motion immersive
+
+      - name: Validate generated assets
+        run: |
+          python scripts/validate_profile_assets.py \
+            --files assets/experience-dark.svg assets/experience-light.svg
 
       - name: Commit and push if changed
         run: |
@@ -38,16 +55,19 @@ jobs:
             echo "No changes."
             exit 0
           fi
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A assets
-          git commit -m "chore: refresh profile ui assets"
+          git add -A assets README.md
+          git commit -m "chore: refresh profile experience"
+
           BRANCH="${GITHUB_REF_NAME:-main}"
           for attempt in 1 2 3; do
             echo "Push attempt ${attempt} on ${BRANCH}"
             git pull --rebase origin "${BRANCH}" && git push origin "HEAD:${BRANCH}" && exit 0
-            echo "Push conflict/network issue, retrying..."
+            echo "Push conflict or network issue, retrying..."
             sleep $((attempt * 2))
           done
+
           echo "Failed to push after retries."
           exit 1

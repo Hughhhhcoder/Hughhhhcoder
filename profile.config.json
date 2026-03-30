@@ -1,0 +1,39 @@
+{
+  "hero_text": "HughhhhCoder",
+  "subtitle": "Design x Engineering x AI Product",
+  "description_cn": "专注高质量产品体验与稳定工程架构，持续打造实用 AI 产品。",
+  "description_en": "Design-minded full-stack engineer building practical and reliable AI experiences.",
+  "motto": "慢慢走，比较快。Slow is smooth, smooth is fast.",
+  "contacts": {
+    "github": "https://github.com/Hughhhhcoder",
+    "email": "Hughz@gmail.com"
+  },
+  "motion_level": "immersive",
+  "core_tech": [
+    "Vue",
+    "TypeScript",
+    "Python",
+    "FastAPI",
+    "MySQL",
+    "Redis",
+    "Docker",
+    "Tailwind",
+    "Git",
+    "Linux",
+    "JavaScript",
+    "Java",
+    "HTML5",
+    "CSS3"
+  ],
+  "ai_platforms": [
+    "OpenAI",
+    "Anthropic",
+    "Gemini",
+    "Hugging Face",
+    "AWS",
+    "Azure",
+    "Groq",
+    "Cohere"
+  ],
+  "featured_repos_limit": 6
+}

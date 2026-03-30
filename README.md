@@ -1,16 +1,8 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg" />
-    <img src="./assets/hero-dark.svg" alt="HughhhhCoder Hero" />
-  </picture>
-</p>
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/core-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./assets/core-light.svg" />
-    <img src="./assets/core-dark.svg" alt="HughhhhCoder Profile Interface" />
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/experience-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/experience-light.svg" />
+    <img src="./assets/experience-dark.svg" alt="HughhhhCoder Premium Profile Experience" />
   </picture>
 </p>
 
@@ -21,7 +13,5 @@
 </p>
 
 <p align="center">
-  <sub>
-    Fully animated dark/light profile UI. Auto-generated daily by GitHub Actions with private repo support via <code>PROFILE_STATS_PAT</code>.
-  </sub>
+  <sub>Auto-generated local SVG experience. Dark and light themes are fully GitHub-compatible with no external card dependencies.</sub>
 </p>
