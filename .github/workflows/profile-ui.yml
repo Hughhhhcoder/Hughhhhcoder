@@ -1,4 +1,4 @@
-name: Update Language Radar
+name: Update Profile UI
 
 on:
   schedule:
@@ -20,31 +20,15 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Generate language radar SVG
+      - name: Generate profile SVG assets
         env:
           GH_TOKEN: ${{ secrets.PROFILE_STATS_PAT || secrets.GITHUB_TOKEN }}
         run: |
-          python scripts/generate_language_radar.py \
+          python scripts/generate_profile_ui.py \
             --username Hughhhhcoder \
-            --output assets/language-radar-dark.svg \
+            --output-dir assets \
             --include-forks \
-            --include-private \
-            --theme dark
-
-          python scripts/generate_language_radar.py \
-            --username Hughhhhcoder \
-            --output assets/language-radar-light.svg \
-            --include-forks \
-            --include-private \
-            --theme light
-
-          python scripts/generate_motion_strip.py \
-            --output assets/motion-strip-dark.svg \
-            --theme dark
-
-          python scripts/generate_motion_strip.py \
-            --output assets/motion-strip-light.svg \
-            --theme light
+            --include-private
 
       - name: Commit and push if changed
         run: |
@@ -55,5 +39,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A assets
-          git commit -m "chore: update language radar"
+          git commit -m "chore: refresh profile ui assets"
           git push
