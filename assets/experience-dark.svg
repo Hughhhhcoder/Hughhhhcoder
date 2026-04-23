@@ -136,13 +136,13 @@
 <rect x="576" y="1272" width="568" height="436" rx="20" fill="#0f172a" stroke="#1f2a44"/>
 <circle cx="306" cy="1467" r="135" fill="none" stroke="#1f2a44" stroke-width="42" opacity="0.42"/>
 <circle cx="306" cy="1467" r="141" fill="none" stroke="#38bdf8" stroke-width="1.2" opacity="0.25"/>
-<path d="M 307.06 1332.00 A 135.00 135.00 0 0 1 350.17 1594.57 L 336.43 1554.88 A 93.00 93.00 0 0 0 306.73 1374.00 Z" fill="#22D3EE" opacity="0.94"/>
-<path d="M 348.16 1595.25 A 135.00 135.00 0 0 1 181.29 1518.70 L 220.09 1502.62 A 93.00 93.00 0 0 0 335.04 1555.35 Z" fill="#F97316" opacity="0.94"/>
-<path d="M 180.50 1516.74 A 135.00 135.00 0 0 1 221.09 1362.04 L 247.51 1394.70 A 93.00 93.00 0 0 0 219.54 1501.26 Z" fill="#A3E635" opacity="0.94"/>
-<path d="M 222.75 1360.72 A 135.00 135.00 0 0 1 243.11 1347.54 L 262.68 1384.71 A 93.00 93.00 0 0 0 248.65 1393.79 Z" fill="#F43F5E" opacity="0.94"/>
-<path d="M 245.00 1346.57 A 135.00 135.00 0 0 1 267.19 1337.70 L 279.26 1377.93 A 93.00 93.00 0 0 0 263.98 1384.04 Z" fill="#60A5FA" opacity="0.94"/>
-<path d="M 269.23 1337.11 A 135.00 135.00 0 0 1 288.81 1333.10 L 294.16 1374.76 A 93.00 93.00 0 0 0 280.67 1377.52 Z" fill="#EAB308" opacity="0.94"/>
-<path d="M 290.91 1332.85 A 135.00 135.00 0 0 1 299.08 1332.18 L 301.24 1374.12 A 93.00 93.00 0 0 0 295.61 1374.58 Z" fill="#34D399" opacity="0.94"/>
+<path d="M 307.06 1332.00 A 135.00 135.00 0 0 1 350.00 1594.63 L 336.31 1554.92 A 93.00 93.00 0 0 0 306.73 1374.00 Z" fill="#22D3EE" opacity="0.94"/>
+<path d="M 347.99 1595.30 A 135.00 135.00 0 0 1 181.25 1518.61 L 220.06 1502.55 A 93.00 93.00 0 0 0 334.93 1555.39 Z" fill="#F97316" opacity="0.94"/>
+<path d="M 180.46 1516.64 A 135.00 135.00 0 0 1 221.12 1362.02 L 247.53 1394.68 A 93.00 93.00 0 0 0 219.52 1501.20 Z" fill="#A3E635" opacity="0.94"/>
+<path d="M 222.78 1360.70 A 135.00 135.00 0 0 1 243.13 1347.53 L 262.69 1384.70 A 93.00 93.00 0 0 0 248.67 1393.77 Z" fill="#F43F5E" opacity="0.94"/>
+<path d="M 245.02 1346.56 A 135.00 135.00 0 0 1 267.20 1337.69 L 279.27 1377.92 A 93.00 93.00 0 0 0 263.99 1384.03 Z" fill="#60A5FA" opacity="0.94"/>
+<path d="M 269.24 1337.10 A 135.00 135.00 0 0 1 288.81 1333.10 L 294.16 1374.76 A 93.00 93.00 0 0 0 280.68 1377.51 Z" fill="#EAB308" opacity="0.94"/>
+<path d="M 290.92 1332.85 A 135.00 135.00 0 0 1 299.09 1332.18 L 301.24 1374.12 A 93.00 93.00 0 0 0 295.61 1374.58 Z" fill="#34D399" opacity="0.94"/>
 <path d="M 301.20 1332.09 A 135.00 135.00 0 0 1 303.55 1332.02 L 304.31 1374.02 A 93.00 93.00 0 0 0 302.70 1374.06 Z" fill="#C084FC" opacity="0.94"/>
 <path d="M 305.67 1332.00 A 135.00 135.00 0 0 1 305.86 1332.00 L 305.90 1374.00 A 93.00 93.00 0 0 0 305.77 1374.00 Z" fill="#FB7185" opacity="0.94"/>
 <path d="M 306.41 1332.00 A 135.00 135.00 0 0 1 306.60 1332.00 L 306.42 1374.00 A 93.00 93.00 0 0 0 306.29 1374.00 Z" fill="#10B981" opacity="0.94"/>
@@ -179,7 +179,7 @@
 <text x="1126" y="1352" text-anchor="end" fill="#F97316" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">24.0%</text>
 <text x="604" y="1386" fill="#e2e8f0" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">Vue</text>
 <rect x="774" y="1370" width="328" height="18" rx="9" fill="#0b1220" stroke="#1f2a44"/>
-<rect x="774" y="1370" width="67" height="18" rx="9" fill="#A3E635" opacity="0.95"><animate attributeName="width" values="8;67" dur="2.70s" repeatCount="1" fill="freeze"/></rect>
+<rect x="774" y="1370" width="66" height="18" rx="9" fill="#A3E635" opacity="0.95"><animate attributeName="width" values="8;66" dur="2.70s" repeatCount="1" fill="freeze"/></rect>
 <text x="1126" y="1386" text-anchor="end" fill="#A3E635" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">20.4%</text>
 <text x="604" y="1420" fill="#e2e8f0" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">JavaScript</text>
 <rect x="774" y="1404" width="328" height="18" rx="9" fill="#0b1220" stroke="#1f2a44"/>
