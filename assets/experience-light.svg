@@ -223,7 +223,7 @@
 <circle cx="572" cy="1874" r="5" fill="#0ea5e9"/>
 <rect x="608" y="1852" width="258" height="92" rx="16" fill="#f8fafc" stroke="#cbd5e1"/>
 <text x="624" y="1882" fill="#334155" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Active 30d</text>
-<text x="624" y="1918" fill="#0f172a" font-size="30" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="700">8</text>
+<text x="624" y="1918" fill="#0f172a" font-size="30" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="700">7</text>
 <circle cx="848" cy="1874" r="5" fill="#16a34a"/>
 <rect x="884" y="1852" width="258" height="92" rx="16" fill="#f8fafc" stroke="#cbd5e1"/>
 <text x="900" y="1882" fill="#334155" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Public Repositories</text>
