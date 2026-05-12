@@ -79,7 +79,7 @@
 <circle cx="820" cy="298" r="5" fill="#14b8a6"/>
 <rect x="852" y="278" width="250" height="56" rx="14" fill="#0f172a" stroke="#1f2a44"/>
 <text x="868" y="302" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Updated</text>
-<text x="868" y="322" fill="#e2e8f0" font-size="18" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-weight="700">2026-05-11</text>
+<text x="868" y="322" fill="#e2e8f0" font-size="18" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-weight="700">2026-05-12</text>
 <circle cx="1084" cy="298" r="5" fill="#22c55e"/>
 <rect x="32" y="370" width="1136" height="792" rx="24" fill="#0b1220" stroke="#1f2a44"/>
 <text x="56" y="414" fill="#e2e8f0" font-size="30" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="700">Technology Matrix</text>
@@ -136,21 +136,21 @@
 <rect x="576" y="1272" width="568" height="436" rx="20" fill="#0f172a" stroke="#1f2a44"/>
 <circle cx="306" cy="1467" r="135" fill="none" stroke="#1f2a44" stroke-width="42" opacity="0.42"/>
 <circle cx="306" cy="1467" r="141" fill="none" stroke="#38bdf8" stroke-width="1.2" opacity="0.25"/>
-<path d="M 307.06 1332.00 A 135.00 135.00 0 1 1 201.12 1552.01 L 233.75 1525.56 A 93.00 93.00 0 1 0 306.73 1374.00 Z" fill="#22D3EE" opacity="0.94"/>
-<path d="M 199.80 1550.35 A 135.00 135.00 0 0 1 178.44 1422.81 L 218.12 1436.56 A 93.00 93.00 0 0 0 232.84 1524.42 Z" fill="#F97316" opacity="0.94"/>
-<path d="M 179.15 1420.82 A 135.00 135.00 0 0 1 240.34 1349.04 L 260.77 1385.74 A 93.00 93.00 0 0 0 218.61 1435.18 Z" fill="#A3E635" opacity="0.94"/>
-<path d="M 242.20 1348.02 A 135.00 135.00 0 0 1 263.02 1339.03 L 276.39 1378.84 A 93.00 93.00 0 0 0 262.05 1385.04 Z" fill="#F43F5E" opacity="0.94"/>
-<path d="M 265.03 1338.37 A 135.00 135.00 0 0 1 277.14 1335.12 L 286.12 1376.15 A 93.00 93.00 0 0 0 277.78 1378.39 Z" fill="#60A5FA" opacity="0.94"/>
-<path d="M 279.21 1334.68 A 135.00 135.00 0 0 1 289.68 1332.99 L 294.75 1374.68 A 93.00 93.00 0 0 0 287.55 1375.85 Z" fill="#EAB308" opacity="0.94"/>
-<path d="M 291.78 1332.75 A 135.00 135.00 0 0 1 298.96 1332.18 L 301.15 1374.13 A 93.00 93.00 0 0 0 296.21 1374.52 Z" fill="#34D399" opacity="0.94"/>
-<path d="M 301.07 1332.09 A 135.00 135.00 0 0 1 301.84 1332.06 L 303.13 1374.04 A 93.00 93.00 0 0 0 302.61 1374.06 Z" fill="#C084FC" opacity="0.94"/>
-<path d="M 303.96 1332.02 A 135.00 135.00 0 0 1 304.35 1332.01 L 304.86 1374.01 A 93.00 93.00 0 0 0 304.59 1374.01 Z" fill="#FB7185" opacity="0.94"/>
+<path d="M 307.06 1332.00 A 135.00 135.00 0 1 1 201.41 1552.35 L 233.95 1525.80 A 93.00 93.00 0 1 0 306.73 1374.00 Z" fill="#22D3EE" opacity="0.94"/>
+<path d="M 200.08 1550.70 A 135.00 135.00 0 0 1 178.25 1423.34 L 218.00 1436.92 A 93.00 93.00 0 0 0 233.03 1524.66 Z" fill="#F97316" opacity="0.94"/>
+<path d="M 178.96 1421.34 A 135.00 135.00 0 0 1 239.79 1349.35 L 260.39 1385.95 A 93.00 93.00 0 0 0 218.48 1435.54 Z" fill="#A3E635" opacity="0.94"/>
+<path d="M 241.64 1348.33 A 135.00 135.00 0 0 1 262.39 1339.24 L 275.96 1378.98 A 93.00 93.00 0 0 0 261.67 1385.25 Z" fill="#F43F5E" opacity="0.94"/>
+<path d="M 264.41 1338.57 A 135.00 135.00 0 0 1 276.48 1335.27 L 285.67 1376.25 A 93.00 93.00 0 0 0 277.35 1378.52 Z" fill="#60A5FA" opacity="0.94"/>
+<path d="M 278.56 1334.82 A 135.00 135.00 0 0 1 289.00 1333.07 L 294.29 1374.74 A 93.00 93.00 0 0 0 287.10 1375.94 Z" fill="#EAB308" opacity="0.94"/>
+<path d="M 291.11 1332.82 A 135.00 135.00 0 0 1 298.27 1332.22 L 300.67 1374.15 A 93.00 93.00 0 0 0 295.74 1374.57 Z" fill="#34D399" opacity="0.94"/>
+<path d="M 300.39 1332.12 A 135.00 135.00 0 0 1 301.84 1332.06 L 303.13 1374.04 A 93.00 93.00 0 0 0 302.13 1374.08 Z" fill="#C084FC" opacity="0.94"/>
+<path d="M 303.96 1332.02 A 135.00 135.00 0 0 1 304.35 1332.01 L 304.87 1374.01 A 93.00 93.00 0 0 0 304.60 1374.01 Z" fill="#FB7185" opacity="0.94"/>
 <path d="M 306.47 1332.00 A 135.00 135.00 0 0 1 306.66 1332.00 L 306.46 1374.00 A 93.00 93.00 0 0 0 306.33 1374.00 Z" fill="#10B981" opacity="0.94"/>
 <circle cx="306" cy="1467" r="85" fill="#0b1220" stroke="#1f2a44"/>
 <text x="306" y="1459" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Total Code</text>
 <text x="306" y="1487" text-anchor="middle" fill="#e2e8f0" font-size="24" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="700">5.10 MB</text>
 <circle cx="84" cy="1610" r="6" fill="#22D3EE"/>
-<text x="98" y="1615" fill="#e2e8f0" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">TypeScript 64.3%</text>
+<text x="98" y="1615" fill="#e2e8f0" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">TypeScript 64.2%</text>
 <circle cx="318" cy="1610" r="6" fill="#F97316"/>
 <text x="332" y="1615" fill="#e2e8f0" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Python 16.1%</text>
 <circle cx="84" cy="1632" r="6" fill="#A3E635"/>
@@ -164,7 +164,7 @@
 <circle cx="84" cy="1676" r="6" fill="#34D399"/>
 <text x="98" y="1681" fill="#e2e8f0" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">CSS 1.1%</text>
 <circle cx="318" cy="1676" r="6" fill="#C084FC"/>
-<text x="332" y="1681" fill="#e2e8f0" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Shell 0.3%</text>
+<text x="332" y="1681" fill="#e2e8f0" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Shell 0.4%</text>
 <circle cx="84" cy="1698" r="6" fill="#FB7185"/>
 <text x="98" y="1703" fill="#e2e8f0" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">PLpgSQL 0.3%</text>
 <circle cx="318" cy="1698" r="6" fill="#10B981"/>
@@ -172,7 +172,7 @@
 <text x="604" y="1318" fill="#e2e8f0" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">TypeScript</text>
 <rect x="774" y="1302" width="328" height="18" rx="9" fill="#0b1220" stroke="#1f2a44"/>
 <rect x="774" y="1302" width="210" height="18" rx="9" fill="#22D3EE" opacity="0.95"><animate attributeName="width" values="8;210" dur="2.20s" repeatCount="1" fill="freeze"/></rect>
-<text x="1126" y="1318" text-anchor="end" fill="#22D3EE" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">64.3%</text>
+<text x="1126" y="1318" text-anchor="end" fill="#22D3EE" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">64.2%</text>
 <text x="604" y="1352" fill="#e2e8f0" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">Python</text>
 <rect x="774" y="1336" width="328" height="18" rx="9" fill="#0b1220" stroke="#1f2a44"/>
 <rect x="774" y="1336" width="52" height="18" rx="9" fill="#F97316" opacity="0.95"><animate attributeName="width" values="8;52" dur="2.45s" repeatCount="1" fill="freeze"/></rect>
@@ -200,7 +200,7 @@
 <text x="604" y="1556" fill="#e2e8f0" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">Shell</text>
 <rect x="774" y="1540" width="328" height="18" rx="9" fill="#0b1220" stroke="#1f2a44"/>
 <rect x="774" y="1540" width="6" height="18" rx="9" fill="#C084FC" opacity="0.95"><animate attributeName="width" values="8;6" dur="3.95s" repeatCount="1" fill="freeze"/></rect>
-<text x="1126" y="1556" text-anchor="end" fill="#C084FC" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0.3%</text>
+<text x="1126" y="1556" text-anchor="end" fill="#C084FC" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0.4%</text>
 <text x="604" y="1590" fill="#e2e8f0" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">PLpgSQL</text>
 <rect x="774" y="1574" width="328" height="18" rx="9" fill="#0b1220" stroke="#1f2a44"/>
 <rect x="774" y="1574" width="6" height="18" rx="9" fill="#FB7185" opacity="0.95"><animate attributeName="width" values="8;6" dur="4.20s" repeatCount="1" fill="freeze"/></rect>
@@ -264,15 +264,15 @@
 <text x="972" y="2244" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Stars</text>
 <text x="1082" y="2244" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Forks</text>
 <line x1="56" y1="2298" x2="1144" y2="2298" stroke="#1f2a44" stroke-opacity="0.55"/>
-<text x="60" y="2282" fill="#e2e8f0" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="600">Hughhhhcoder</text>
-<text x="60" y="2300" fill="#94a3b8" font-size="14" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">No description</text>
-<text x="792" y="2282" fill="#38bdf8" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Python</text>
+<text x="60" y="2282" fill="#e2e8f0" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="600">remote-claude-code</text>
+<text x="60" y="2300" fill="#94a3b8" font-size="14" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">Remote Claude Code — control the claude CLI from any device via web/m…</text>
+<text x="792" y="2282" fill="#38bdf8" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">TypeScript</text>
 <text x="972" y="2282" fill="#e2e8f0" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">1</text>
 <text x="1082" y="2282" fill="#e2e8f0" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0</text>
 <line x1="56" y1="2346" x2="1144" y2="2346" stroke="#1f2a44" stroke-opacity="0.55"/>
-<text x="60" y="2330" fill="#e2e8f0" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="600">remote-claude-code</text>
-<text x="60" y="2348" fill="#94a3b8" font-size="14" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">Remote Claude Code — control the claude CLI from any device via web/m…</text>
-<text x="792" y="2330" fill="#38bdf8" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">TypeScript</text>
+<text x="60" y="2330" fill="#e2e8f0" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="600">Hughhhhcoder</text>
+<text x="60" y="2348" fill="#94a3b8" font-size="14" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">No description</text>
+<text x="792" y="2330" fill="#38bdf8" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Python</text>
 <text x="972" y="2330" fill="#e2e8f0" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">1</text>
 <text x="1082" y="2330" fill="#e2e8f0" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0</text>
 <line x1="56" y1="2394" x2="1144" y2="2394" stroke="#1f2a44" stroke-opacity="0.55"/>
