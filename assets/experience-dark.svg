@@ -230,8 +230,8 @@
 <text x="900" y="1918" fill="#e2e8f0" font-size="30" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="700">6</text>
 <circle cx="1124" cy="1874" r="5" fill="#14b8a6"/>
 <rect x="56" y="1964" width="1088" height="220" rx="16" fill="#0f172a" stroke="#1f2a44"/>
-<path d="M 84.00 2148.00  L 84.00 2148.00 L 177.82 2148.00 L 271.64 2148.00 L 365.45 2116.00 L 459.27 2116.00 L 553.09 2148.00 L 646.91 2116.00 L 740.73 2148.00 L 834.55 2084.00 L 928.36 1988.00 L 1022.18 2052.00 L 1116.00 2148.00 L 1116.00 2148.00 Z" fill="#38bdf8" fill-opacity="0.18"/>
-<path d="M 84.00 2148.00 L 177.82 2148.00 L 271.64 2148.00 L 365.45 2116.00 L 459.27 2116.00 L 553.09 2148.00 L 646.91 2116.00 L 740.73 2148.00 L 834.55 2084.00 L 928.36 1988.00 L 1022.18 2052.00 L 1116.00 2148.00" fill="none" stroke="#22d3ee" stroke-width="4" stroke-dasharray="12 8"><animate attributeName="stroke-dashoffset" values="0;-200" dur="7s" repeatCount="indefinite"/></path>
+<path d="M 84.00 2148.00  L 84.00 2148.00 L 177.82 2148.00 L 271.64 2148.00 L 365.45 2116.00 L 459.27 2116.00 L 553.09 2148.00 L 646.91 2116.00 L 740.73 2148.00 L 834.55 2084.00 L 928.36 1988.00 L 1022.18 2116.00 L 1116.00 2084.00 L 1116.00 2148.00 Z" fill="#38bdf8" fill-opacity="0.18"/>
+<path d="M 84.00 2148.00 L 177.82 2148.00 L 271.64 2148.00 L 365.45 2116.00 L 459.27 2116.00 L 553.09 2148.00 L 646.91 2116.00 L 740.73 2148.00 L 834.55 2084.00 L 928.36 1988.00 L 1022.18 2116.00 L 1116.00 2084.00" fill="none" stroke="#22d3ee" stroke-width="4" stroke-dasharray="12 8"><animate attributeName="stroke-dashoffset" values="0;-200" dur="7s" repeatCount="indefinite"/></path>
 <circle cx="84.00" cy="2148.00" r="4" fill="#38bdf8"/>
 <text x="84.00" y="2170" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Jul</text>
 <circle cx="177.82" cy="2148.00" r="4" fill="#38bdf8"/>
@@ -252,11 +252,11 @@
 <text x="834.55" y="2170" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Mar</text>
 <circle cx="928.36" cy="1988.00" r="4" fill="#38bdf8"/>
 <text x="928.36" y="2170" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Apr</text>
-<circle cx="1022.18" cy="2052.00" r="4" fill="#38bdf8"/>
+<circle cx="1022.18" cy="2116.00" r="4" fill="#38bdf8"/>
 <text x="1022.18" y="2170" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">May</text>
-<circle cx="1116.00" cy="2148.00" r="4" fill="#38bdf8"/>
+<circle cx="1116.00" cy="2084.00" r="4" fill="#38bdf8"/>
 <text x="1116.00" y="2170" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Jun</text>
-<circle cx="84.00" cy="2148.00" r="6" fill="#22d3ee" filter="url(#glow)"><animateMotion dur="7s" repeatCount="indefinite" path="M 84.00 2148.00 L 177.82 2148.00 L 271.64 2148.00 L 365.45 2116.00 L 459.27 2116.00 L 553.09 2148.00 L 646.91 2116.00 L 740.73 2148.00 L 834.55 2084.00 L 928.36 1988.00 L 1022.18 2052.00 L 1116.00 2148.00"/></circle>
+<circle cx="84.00" cy="2148.00" r="6" fill="#22d3ee" filter="url(#glow)"><animateMotion dur="7s" repeatCount="indefinite" path="M 84.00 2148.00 L 177.82 2148.00 L 271.64 2148.00 L 365.45 2116.00 L 459.27 2116.00 L 553.09 2148.00 L 646.91 2116.00 L 740.73 2148.00 L 834.55 2084.00 L 928.36 1988.00 L 1022.18 2116.00 L 1116.00 2084.00"/></circle>
 <text x="56" y="2224" fill="#e2e8f0" font-size="22" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="700">Featured Projects</text>
 <line x1="56" y1="2256" x2="1144" y2="2256" stroke="#1f2a44"/>
 <text x="60" y="2244" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Repository</text>
