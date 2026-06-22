@@ -71,11 +71,11 @@
 <circle cx="292" cy="298" r="5" fill="#22d3ee"/>
 <rect x="324" y="278" width="250" height="56" rx="14" fill="#0f172a" stroke="#1f2a44"/>
 <text x="340" y="302" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Total Repos</text>
-<text x="340" y="322" fill="#e2e8f0" font-size="18" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-weight="700">16</text>
+<text x="340" y="322" fill="#e2e8f0" font-size="18" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-weight="700">17</text>
 <circle cx="556" cy="298" r="5" fill="#38bdf8"/>
 <rect x="588" y="278" width="250" height="56" rx="14" fill="#0f172a" stroke="#1f2a44"/>
 <text x="604" y="302" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Private Repos</text>
-<text x="604" y="322" fill="#e2e8f0" font-size="18" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-weight="700">10</text>
+<text x="604" y="322" fill="#e2e8f0" font-size="18" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-weight="700">11</text>
 <circle cx="820" cy="298" r="5" fill="#14b8a6"/>
 <rect x="852" y="278" width="250" height="56" rx="14" fill="#0f172a" stroke="#1f2a44"/>
 <text x="868" y="302" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Updated</text>
@@ -136,19 +136,19 @@
 <rect x="576" y="1272" width="568" height="436" rx="20" fill="#0f172a" stroke="#1f2a44"/>
 <circle cx="306" cy="1467" r="135" fill="none" stroke="#1f2a44" stroke-width="42" opacity="0.42"/>
 <circle cx="306" cy="1467" r="141" fill="none" stroke="#38bdf8" stroke-width="1.2" opacity="0.25"/>
-<path d="M 307.06 1332.00 A 135.00 135.00 0 1 1 194.81 1543.56 L 229.40 1519.74 A 93.00 93.00 0 1 0 306.73 1374.00 Z" fill="#22D3EE" opacity="0.94"/>
-<path d="M 193.62 1541.81 A 135.00 135.00 0 0 1 178.95 1421.36 L 218.48 1435.56 A 93.00 93.00 0 0 0 228.58 1518.54 Z" fill="#F97316" opacity="0.94"/>
-<path d="M 179.68 1419.37 A 135.00 135.00 0 0 1 236.08 1351.52 L 257.84 1387.44 A 93.00 93.00 0 0 0 218.98 1434.19 Z" fill="#A3E635" opacity="0.94"/>
-<path d="M 237.91 1350.43 A 135.00 135.00 0 0 1 265.07 1338.35 L 277.80 1378.38 A 93.00 93.00 0 0 0 259.09 1386.70 Z" fill="#F43F5E" opacity="0.94"/>
-<path d="M 267.09 1337.73 A 135.00 135.00 0 0 1 278.31 1334.87 L 286.92 1375.98 A 93.00 93.00 0 0 0 279.20 1377.95 Z" fill="#60A5FA" opacity="0.94"/>
-<path d="M 280.38 1334.45 A 135.00 135.00 0 0 1 290.03 1332.95 L 295.00 1374.65 A 93.00 93.00 0 0 0 288.35 1375.69 Z" fill="#EAB308" opacity="0.94"/>
-<path d="M 292.14 1332.71 A 135.00 135.00 0 0 1 298.70 1332.20 L 300.97 1374.14 A 93.00 93.00 0 0 0 296.45 1374.49 Z" fill="#34D399" opacity="0.94"/>
-<path d="M 300.82 1332.10 A 135.00 135.00 0 0 1 302.04 1332.06 L 303.27 1374.04 A 93.00 93.00 0 0 0 302.43 1374.07 Z" fill="#C084FC" opacity="0.94"/>
+<path d="M 307.06 1332.00 A 135.00 135.00 0 1 1 194.84 1543.61 L 229.42 1519.77 A 93.00 93.00 0 1 0 306.73 1374.00 Z" fill="#22D3EE" opacity="0.94"/>
+<path d="M 193.65 1541.85 A 135.00 135.00 0 0 1 178.93 1421.42 L 218.46 1435.60 A 93.00 93.00 0 0 0 228.60 1518.56 Z" fill="#F97316" opacity="0.94"/>
+<path d="M 179.66 1419.43 A 135.00 135.00 0 0 1 236.02 1351.55 L 257.79 1387.47 A 93.00 93.00 0 0 0 218.97 1434.23 Z" fill="#A3E635" opacity="0.94"/>
+<path d="M 237.85 1350.47 A 135.00 135.00 0 0 1 265.00 1338.38 L 277.75 1378.39 A 93.00 93.00 0 0 0 259.05 1386.72 Z" fill="#F43F5E" opacity="0.94"/>
+<path d="M 267.02 1337.75 A 135.00 135.00 0 0 1 278.23 1334.89 L 286.87 1375.99 A 93.00 93.00 0 0 0 279.15 1377.96 Z" fill="#60A5FA" opacity="0.94"/>
+<path d="M 280.31 1334.47 A 135.00 135.00 0 0 1 289.96 1332.96 L 294.95 1374.66 A 93.00 93.00 0 0 0 288.30 1375.70 Z" fill="#EAB308" opacity="0.94"/>
+<path d="M 292.06 1332.72 A 135.00 135.00 0 0 1 298.63 1332.20 L 300.92 1374.14 A 93.00 93.00 0 0 0 296.40 1374.50 Z" fill="#34D399" opacity="0.94"/>
+<path d="M 300.75 1332.10 A 135.00 135.00 0 0 1 302.04 1332.06 L 303.27 1374.04 A 93.00 93.00 0 0 0 302.38 1374.07 Z" fill="#C084FC" opacity="0.94"/>
 <path d="M 304.16 1332.01 A 135.00 135.00 0 0 1 304.39 1332.01 L 304.89 1374.01 A 93.00 93.00 0 0 0 304.73 1374.01 Z" fill="#FB7185" opacity="0.94"/>
 <path d="M 306.51 1332.00 A 135.00 135.00 0 0 1 306.70 1332.00 L 306.48 1374.00 A 93.00 93.00 0 0 0 306.35 1374.00 Z" fill="#10B981" opacity="0.94"/>
 <circle cx="306" cy="1467" r="85" fill="#0b1220" stroke="#1f2a44"/>
 <text x="306" y="1459" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Total Code</text>
-<text x="306" y="1487" text-anchor="middle" fill="#e2e8f0" font-size="24" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="700">5.45 MB</text>
+<text x="306" y="1487" text-anchor="middle" fill="#e2e8f0" font-size="24" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="700">5.46 MB</text>
 <circle cx="84" cy="1610" r="6" fill="#22D3EE"/>
 <text x="98" y="1615" fill="#e2e8f0" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">TypeScript 65.5%</text>
 <circle cx="318" cy="1610" r="6" fill="#F97316"/>
@@ -209,7 +209,7 @@
 <rect x="774" y="1608" width="328" height="18" rx="9" fill="#0b1220" stroke="#1f2a44"/>
 <rect x="774" y="1608" width="6" height="18" rx="9" fill="#10B981" opacity="0.95"><animate attributeName="width" values="8;6" dur="4.45s" repeatCount="1" fill="freeze"/></rect>
 <text x="1126" y="1624" text-anchor="end" fill="#10B981" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0.0%</text>
-<text x="598" y="1682" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Total repos: 16 | Private repos: 10 | Non-fork scanned: 16</text>
+<text x="598" y="1682" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Total repos: 17 | Private repos: 11 | Non-fork scanned: 17</text>
 <rect x="32" y="1758" width="1136" height="808" rx="24" fill="#0b1220" stroke="#1f2a44"/>
 <text x="56" y="1802" fill="#e2e8f0" font-size="30" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="700">Repository Pulse</text>
 <text x="56" y="1828" fill="#94a3b8" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">Contribution rhythm and curated repository highlights.</text>
@@ -223,15 +223,15 @@
 <circle cx="572" cy="1874" r="5" fill="#38bdf8"/>
 <rect x="608" y="1852" width="258" height="92" rx="16" fill="#0f172a" stroke="#1f2a44"/>
 <text x="624" y="1882" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Active 30d</text>
-<text x="624" y="1918" fill="#e2e8f0" font-size="30" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="700">3</text>
+<text x="624" y="1918" fill="#e2e8f0" font-size="30" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="700">4</text>
 <circle cx="848" cy="1874" r="5" fill="#22c55e"/>
 <rect x="884" y="1852" width="258" height="92" rx="16" fill="#0f172a" stroke="#1f2a44"/>
 <text x="900" y="1882" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Public Repositories</text>
 <text x="900" y="1918" fill="#e2e8f0" font-size="30" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="700">6</text>
 <circle cx="1124" cy="1874" r="5" fill="#14b8a6"/>
 <rect x="56" y="1964" width="1088" height="220" rx="16" fill="#0f172a" stroke="#1f2a44"/>
-<path d="M 84.00 2148.00  L 84.00 2148.00 L 177.82 2148.00 L 271.64 2148.00 L 365.45 2108.00 L 459.27 2108.00 L 553.09 2148.00 L 646.91 2108.00 L 740.73 2148.00 L 834.55 2068.00 L 928.36 1988.00 L 1022.18 2108.00 L 1116.00 2028.00 L 1116.00 2148.00 Z" fill="#38bdf8" fill-opacity="0.18"/>
-<path d="M 84.00 2148.00 L 177.82 2148.00 L 271.64 2148.00 L 365.45 2108.00 L 459.27 2108.00 L 553.09 2148.00 L 646.91 2108.00 L 740.73 2148.00 L 834.55 2068.00 L 928.36 1988.00 L 1022.18 2108.00 L 1116.00 2028.00" fill="none" stroke="#22d3ee" stroke-width="4" stroke-dasharray="12 8"><animate attributeName="stroke-dashoffset" values="0;-200" dur="7s" repeatCount="indefinite"/></path>
+<path d="M 84.00 2148.00  L 84.00 2148.00 L 177.82 2148.00 L 271.64 2148.00 L 365.45 2108.00 L 459.27 2108.00 L 553.09 2148.00 L 646.91 2108.00 L 740.73 2148.00 L 834.55 2068.00 L 928.36 1988.00 L 1022.18 2108.00 L 1116.00 1988.00 L 1116.00 2148.00 Z" fill="#38bdf8" fill-opacity="0.18"/>
+<path d="M 84.00 2148.00 L 177.82 2148.00 L 271.64 2148.00 L 365.45 2108.00 L 459.27 2108.00 L 553.09 2148.00 L 646.91 2108.00 L 740.73 2148.00 L 834.55 2068.00 L 928.36 1988.00 L 1022.18 2108.00 L 1116.00 1988.00" fill="none" stroke="#22d3ee" stroke-width="4" stroke-dasharray="12 8"><animate attributeName="stroke-dashoffset" values="0;-200" dur="7s" repeatCount="indefinite"/></path>
 <circle cx="84.00" cy="2148.00" r="4" fill="#38bdf8"/>
 <text x="84.00" y="2170" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Jul</text>
 <circle cx="177.82" cy="2148.00" r="4" fill="#38bdf8"/>
@@ -254,9 +254,9 @@
 <text x="928.36" y="2170" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Apr</text>
 <circle cx="1022.18" cy="2108.00" r="4" fill="#38bdf8"/>
 <text x="1022.18" y="2170" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">May</text>
-<circle cx="1116.00" cy="2028.00" r="4" fill="#38bdf8"/>
+<circle cx="1116.00" cy="1988.00" r="4" fill="#38bdf8"/>
 <text x="1116.00" y="2170" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Jun</text>
-<circle cx="84.00" cy="2148.00" r="6" fill="#22d3ee" filter="url(#glow)"><animateMotion dur="7s" repeatCount="indefinite" path="M 84.00 2148.00 L 177.82 2148.00 L 271.64 2148.00 L 365.45 2108.00 L 459.27 2108.00 L 553.09 2148.00 L 646.91 2108.00 L 740.73 2148.00 L 834.55 2068.00 L 928.36 1988.00 L 1022.18 2108.00 L 1116.00 2028.00"/></circle>
+<circle cx="84.00" cy="2148.00" r="6" fill="#22d3ee" filter="url(#glow)"><animateMotion dur="7s" repeatCount="indefinite" path="M 84.00 2148.00 L 177.82 2148.00 L 271.64 2148.00 L 365.45 2108.00 L 459.27 2108.00 L 553.09 2148.00 L 646.91 2108.00 L 740.73 2148.00 L 834.55 2068.00 L 928.36 1988.00 L 1022.18 2108.00 L 1116.00 1988.00"/></circle>
 <text x="56" y="2224" fill="#e2e8f0" font-size="22" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="700">Featured Projects</text>
 <line x1="56" y1="2256" x2="1144" y2="2256" stroke="#1f2a44"/>
 <text x="60" y="2244" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Repository</text>
@@ -276,25 +276,25 @@
 <text x="972" y="2330" fill="#e2e8f0" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">1</text>
 <text x="1082" y="2330" fill="#e2e8f0" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0</text>
 <line x1="56" y1="2394" x2="1144" y2="2394" stroke="#1f2a44" stroke-opacity="0.55"/>
-<text x="60" y="2378" fill="#e2e8f0" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="600">H</text>
+<text x="60" y="2378" fill="#e2e8f0" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="600">Hugh-RedStone</text>
 <text x="60" y="2396" fill="#94a3b8" font-size="14" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">No description</text>
-<text x="792" y="2378" fill="#38bdf8" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Python</text>
+<text x="792" y="2378" fill="#38bdf8" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Shell</text>
 <text x="972" y="2378" fill="#e2e8f0" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0</text>
 <text x="1082" y="2378" fill="#e2e8f0" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0</text>
 <line x1="56" y1="2442" x2="1144" y2="2442" stroke="#1f2a44" stroke-opacity="0.55"/>
-<text x="60" y="2426" fill="#e2e8f0" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="600">Hoer</text>
+<text x="60" y="2426" fill="#e2e8f0" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="600">H</text>
 <text x="60" y="2444" fill="#94a3b8" font-size="14" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">No description</text>
-<text x="792" y="2426" fill="#38bdf8" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">TypeScript</text>
+<text x="792" y="2426" fill="#38bdf8" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Python</text>
 <text x="972" y="2426" fill="#e2e8f0" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0</text>
 <text x="1082" y="2426" fill="#e2e8f0" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0</text>
 <line x1="56" y1="2490" x2="1144" y2="2490" stroke="#1f2a44" stroke-opacity="0.55"/>
-<text x="60" y="2474" fill="#e2e8f0" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="600">promail</text>
+<text x="60" y="2474" fill="#e2e8f0" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="600">Hoer</text>
 <text x="60" y="2492" fill="#94a3b8" font-size="14" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">No description</text>
 <text x="792" y="2474" fill="#38bdf8" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">TypeScript</text>
 <text x="972" y="2474" fill="#e2e8f0" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0</text>
 <text x="1082" y="2474" fill="#e2e8f0" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0</text>
 <line x1="56" y1="2538" x2="1144" y2="2538" stroke="#1f2a44" stroke-opacity="0.55"/>
-<text x="60" y="2522" fill="#e2e8f0" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="600">maobti</text>
+<text x="60" y="2522" fill="#e2e8f0" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="600">promail</text>
 <text x="60" y="2540" fill="#94a3b8" font-size="14" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">No description</text>
 <text x="792" y="2522" fill="#38bdf8" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">TypeScript</text>
 <text x="972" y="2522" fill="#e2e8f0" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0</text>
