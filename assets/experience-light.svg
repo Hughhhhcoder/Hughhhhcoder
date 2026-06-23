@@ -67,7 +67,7 @@
 <text x="62" y="246" fill="#0284c7" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">慢慢走，比较快。Slow is smooth, smooth is fast.</text>
 <rect x="60" y="278" width="250" height="56" rx="14" fill="#f8fafc" stroke="#cbd5e1"/>
 <text x="76" y="302" fill="#334155" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Followers</text>
-<text x="76" y="322" fill="#0f172a" font-size="18" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-weight="700">2</text>
+<text x="76" y="322" fill="#0f172a" font-size="18" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-weight="700">3</text>
 <circle cx="292" cy="298" r="5" fill="#0284c7"/>
 <rect x="324" y="278" width="250" height="56" rx="14" fill="#f8fafc" stroke="#cbd5e1"/>
 <text x="340" y="302" fill="#334155" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Total Repos</text>
