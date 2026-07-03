@@ -136,25 +136,25 @@
 <rect x="576" y="1272" width="568" height="436" rx="20" fill="#f8fafc" stroke="#cbd5e1"/>
 <circle cx="306" cy="1467" r="135" fill="none" stroke="#cbd5e1" stroke-width="42" opacity="0.42"/>
 <circle cx="306" cy="1467" r="141" fill="none" stroke="#0ea5e9" stroke-width="1.2" opacity="0.25"/>
-<path d="M 307.06 1332.00 A 135.00 135.00 0 1 1 212.00 1563.90 L 241.24 1533.75 A 93.00 93.00 0 1 0 306.73 1374.00 Z" fill="#0369A1" opacity="0.94"/>
-<path d="M 210.49 1562.41 A 135.00 135.00 0 0 1 171.06 1470.86 L 213.04 1469.66 A 93.00 93.00 0 0 0 240.20 1532.72 Z" fill="#C2410C" opacity="0.94"/>
-<path d="M 171.01 1468.74 A 135.00 135.00 0 0 1 204.39 1378.11 L 236.00 1405.77 A 93.00 93.00 0 0 0 213.01 1468.20 Z" fill="#4D7C0F" opacity="0.94"/>
-<path d="M 205.80 1376.53 A 135.00 135.00 0 0 1 266.48 1337.91 L 278.77 1378.07 A 93.00 93.00 0 0 0 236.97 1404.68 Z" fill="#BE123C" opacity="0.94"/>
-<path d="M 268.51 1337.31 A 135.00 135.00 0 0 1 277.27 1335.09 L 286.20 1376.13 A 93.00 93.00 0 0 0 280.17 1377.66 Z" fill="#1D4ED8" opacity="0.94"/>
-<path d="M 279.34 1334.66 A 135.00 135.00 0 0 1 286.79 1333.37 L 292.77 1374.95 A 93.00 93.00 0 0 0 287.63 1375.83 Z" fill="#A16207" opacity="0.94"/>
+<path d="M 307.06 1332.00 A 135.00 135.00 0 1 1 212.79 1564.66 L 241.79 1534.28 A 93.00 93.00 0 1 0 306.73 1374.00 Z" fill="#0369A1" opacity="0.94"/>
+<path d="M 211.27 1563.18 A 135.00 135.00 0 0 1 171.09 1471.95 L 213.06 1470.41 A 93.00 93.00 0 0 0 240.74 1533.26 Z" fill="#C2410C" opacity="0.94"/>
+<path d="M 171.03 1469.83 A 135.00 135.00 0 0 1 204.38 1378.13 L 235.99 1405.78 A 93.00 93.00 0 0 0 213.02 1468.95 Z" fill="#4D7C0F" opacity="0.94"/>
+<path d="M 205.79 1376.54 A 135.00 135.00 0 0 1 266.47 1337.92 L 278.77 1378.08 A 93.00 93.00 0 0 0 236.97 1404.68 Z" fill="#BE123C" opacity="0.94"/>
+<path d="M 268.51 1337.31 A 135.00 135.00 0 0 1 277.26 1335.09 L 286.20 1376.13 A 93.00 93.00 0 0 0 280.17 1377.66 Z" fill="#1D4ED8" opacity="0.94"/>
+<path d="M 279.34 1334.66 A 135.00 135.00 0 0 1 286.79 1333.37 L 292.76 1374.95 A 93.00 93.00 0 0 0 287.63 1375.83 Z" fill="#A16207" opacity="0.94"/>
 <path d="M 288.89 1333.09 A 135.00 135.00 0 0 1 294.44 1332.50 L 298.04 1374.34 A 93.00 93.00 0 0 0 294.21 1374.75 Z" fill="#047857" opacity="0.94"/>
-<path d="M 296.56 1332.33 A 135.00 135.00 0 0 1 301.65 1332.07 L 303.00 1374.05 A 93.00 93.00 0 0 0 299.49 1374.23 Z" fill="#7E22CE" opacity="0.94"/>
+<path d="M 296.55 1332.33 A 135.00 135.00 0 0 1 301.65 1332.07 L 303.00 1374.05 A 93.00 93.00 0 0 0 299.49 1374.23 Z" fill="#7E22CE" opacity="0.94"/>
 <path d="M 303.77 1332.02 A 135.00 135.00 0 0 1 304.49 1332.01 L 304.96 1374.01 A 93.00 93.00 0 0 0 304.46 1374.01 Z" fill="#E11D48" opacity="0.94"/>
 <path d="M 306.61 1332.00 A 135.00 135.00 0 0 1 306.80 1332.00 L 306.55 1374.00 A 93.00 93.00 0 0 0 306.42 1374.00 Z" fill="#0F766E" opacity="0.94"/>
 <circle cx="306" cy="1467" r="85" fill="#ffffff" stroke="#cbd5e1"/>
 <text x="306" y="1459" text-anchor="middle" fill="#334155" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Total Code</text>
 <text x="306" y="1487" text-anchor="middle" fill="#0f172a" font-size="24" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="700">6.70 MB</text>
 <circle cx="84" cy="1610" r="6" fill="#0369A1"/>
-<text x="98" y="1615" fill="#0f172a" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">TypeScript 62.4%</text>
+<text x="98" y="1615" fill="#0f172a" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">TypeScript 62.3%</text>
 <circle cx="318" cy="1610" r="6" fill="#C2410C"/>
 <text x="332" y="1615" fill="#0f172a" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Python 12.3%</text>
 <circle cx="84" cy="1632" r="6" fill="#4D7C0F"/>
-<text x="98" y="1637" fill="#0f172a" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">JavaScript 11.9%</text>
+<text x="98" y="1637" fill="#0f172a" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">JavaScript 12.0%</text>
 <circle cx="318" cy="1632" r="6" fill="#BE123C"/>
 <text x="332" y="1637" fill="#0f172a" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Vue 8.8%</text>
 <circle cx="84" cy="1654" r="6" fill="#1D4ED8"/>
@@ -172,7 +172,7 @@
 <text x="604" y="1318" fill="#0f172a" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">TypeScript</text>
 <rect x="774" y="1302" width="328" height="18" rx="9" fill="#ffffff" stroke="#cbd5e1"/>
 <rect x="774" y="1302" width="204" height="18" rx="9" fill="#0369A1" opacity="0.95"><animate attributeName="width" values="8;204" dur="2.20s" repeatCount="1" fill="freeze"/></rect>
-<text x="1126" y="1318" text-anchor="end" fill="#0369A1" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">62.4%</text>
+<text x="1126" y="1318" text-anchor="end" fill="#0369A1" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">62.3%</text>
 <text x="604" y="1352" fill="#0f172a" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">Python</text>
 <rect x="774" y="1336" width="328" height="18" rx="9" fill="#ffffff" stroke="#cbd5e1"/>
 <rect x="774" y="1336" width="40" height="18" rx="9" fill="#C2410C" opacity="0.95"><animate attributeName="width" values="8;40" dur="2.45s" repeatCount="1" fill="freeze"/></rect>
@@ -180,7 +180,7 @@
 <text x="604" y="1386" fill="#0f172a" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">JavaScript</text>
 <rect x="774" y="1370" width="328" height="18" rx="9" fill="#ffffff" stroke="#cbd5e1"/>
 <rect x="774" y="1370" width="39" height="18" rx="9" fill="#4D7C0F" opacity="0.95"><animate attributeName="width" values="8;39" dur="2.70s" repeatCount="1" fill="freeze"/></rect>
-<text x="1126" y="1386" text-anchor="end" fill="#4D7C0F" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">11.9%</text>
+<text x="1126" y="1386" text-anchor="end" fill="#4D7C0F" font-size="16" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">12.0%</text>
 <text x="604" y="1420" fill="#0f172a" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">Vue</text>
 <rect x="774" y="1404" width="328" height="18" rx="9" fill="#ffffff" stroke="#cbd5e1"/>
 <rect x="774" y="1404" width="28" height="18" rx="9" fill="#BE123C" opacity="0.95"><animate attributeName="width" values="8;28" dur="2.95s" repeatCount="1" fill="freeze"/></rect>
@@ -278,7 +278,7 @@
 <line x1="56" y1="2394" x2="1144" y2="2394" stroke="#cbd5e1" stroke-opacity="0.55"/>
 <text x="60" y="2378" fill="#0f172a" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="600">inno</text>
 <text x="60" y="2396" fill="#334155" font-size="14" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">No description</text>
-<text x="792" y="2378" fill="#0ea5e9" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">TypeScript</text>
+<text x="792" y="2378" fill="#0ea5e9" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">JavaScript</text>
 <text x="972" y="2378" fill="#0f172a" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0</text>
 <text x="1082" y="2378" fill="#0f172a" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0</text>
 <line x1="56" y1="2442" x2="1144" y2="2442" stroke="#cbd5e1" stroke-opacity="0.55"/>
