@@ -79,7 +79,7 @@
 <circle cx="820" cy="298" r="5" fill="#14b8a6"/>
 <rect x="852" y="278" width="250" height="56" rx="14" fill="#0f172a" stroke="#1f2a44"/>
 <text x="868" y="302" fill="#94a3b8" font-size="14" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Updated</text>
-<text x="868" y="322" fill="#e2e8f0" font-size="18" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-weight="700">2026-07-11</text>
+<text x="868" y="322" fill="#e2e8f0" font-size="18" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-weight="700">2026-07-12</text>
 <circle cx="1084" cy="298" r="5" fill="#22c55e"/>
 <rect x="32" y="370" width="1136" height="792" rx="24" fill="#0b1220" stroke="#1f2a44"/>
 <text x="56" y="414" fill="#e2e8f0" font-size="30" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="700">Technology Matrix</text>
@@ -276,15 +276,15 @@
 <text x="972" y="2330" fill="#e2e8f0" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">1</text>
 <text x="1082" y="2330" fill="#e2e8f0" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0</text>
 <line x1="56" y1="2394" x2="1144" y2="2394" stroke="#1f2a44" stroke-opacity="0.55"/>
-<text x="60" y="2378" fill="#e2e8f0" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="600">H</text>
+<text x="60" y="2378" fill="#e2e8f0" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="600">inno</text>
 <text x="60" y="2396" fill="#94a3b8" font-size="14" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">No description</text>
-<text x="792" y="2378" fill="#38bdf8" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Python</text>
+<text x="792" y="2378" fill="#38bdf8" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">JavaScript</text>
 <text x="972" y="2378" fill="#e2e8f0" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0</text>
 <text x="1082" y="2378" fill="#e2e8f0" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0</text>
 <line x1="56" y1="2442" x2="1144" y2="2442" stroke="#1f2a44" stroke-opacity="0.55"/>
-<text x="60" y="2426" fill="#e2e8f0" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="600">inno</text>
+<text x="60" y="2426" fill="#e2e8f0" font-size="16" font-family="SF Pro Display, Segoe UI, Arial, sans-serif" font-weight="600">H</text>
 <text x="60" y="2444" fill="#94a3b8" font-size="14" font-family="SF Pro Display, Segoe UI, Arial, sans-serif">No description</text>
-<text x="792" y="2426" fill="#38bdf8" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">JavaScript</text>
+<text x="792" y="2426" fill="#38bdf8" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">Python</text>
 <text x="972" y="2426" fill="#e2e8f0" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0</text>
 <text x="1082" y="2426" fill="#e2e8f0" font-size="15" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace">0</text>
 <line x1="56" y1="2490" x2="1144" y2="2490" stroke="#1f2a44" stroke-opacity="0.55"/>
