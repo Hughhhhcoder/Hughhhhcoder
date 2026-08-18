@@ -1,12 +1,12 @@
 <div align="center">
   <sub>HUGHCHAW / INDEPENDENT BUILDER · PRODUCT ENGINEER · AI APPLICATIONS</sub>
 
-  <h1>我在写代码，<br />也在研究如何让 AI 真正落地。</h1>
+  <h1>I write code,<br />then I work out how AI becomes useful.</h1>
 
   <p>
-    独立开发者、产品型工程师、AI 应用深度实践者。<br />
-    我关心的不只是模型能做什么，而是它能不能被人理解、使用，<br />
-    并在真实世界里继续生长。
+    Independent builder, product engineer, and applied AI developer.<br />
+    I care less about what a model can do in a demo<br />
+    than what people can understand, use, and keep.
   </p>
 
   <p>
@@ -25,22 +25,24 @@
       <br />
       <sub>01 / CODE</sub>
       <br /><br />
-      写代码不是终点。<br />
-      它是把一个模糊想法，变成可运行、可验证、能被别人使用的东西。
+      Code is not the destination.<br />
+      It is how a loose idea becomes something runnable, testable, and useful.
     </td>
     <td width="33.33%" valign="top">
       <img src="./assets/contact-ai.png" alt="Film still life of blank interface sketches and a small device" width="100%" />
       <br />
       <sub>02 / AI IN PRACTICE</sub>
       <br /><br />
-      我在研究 AI 如何离开演示文稿，进入真实的工作流、产品和日常决策。
+      I study how AI leaves the demo<br />
+      and enters real workflows, products, and everyday decisions.
     </td>
     <td width="33.33%" valign="top">
       <img src="./assets/contact-product.png" alt="Film still life of a blank notebook, map and paper cards" width="100%" />
       <br />
       <sub>03 / PRODUCT · MARKET</sub>
       <br /><br />
-      最近也在学习产品、商业模式与增长，练习从“能做”继续走到“值得做”。
+      I am learning to take the next step:<br />
+      from what can be built to what is worth building.
     </td>
   </tr>
 </table>
@@ -57,12 +59,12 @@
       <sub>HOW I WORK</sub>
     </td>
     <td width="72%" valign="top">
-      <strong>先确认真实问题，再决定技术。</strong><br />
-      我喜欢小而清晰的系统，也喜欢把复杂的事情讲到足够简单。<br /><br />
-      <strong>把 AI 能力做成可理解、可使用的产品。</strong><br />
-      好的应用不应该要求用户先理解模型，它应该先帮助用户完成事情。<br /><br />
-      <strong>用小步验证连接代码、产品和真实反馈。</strong><br />
-      持续交付、持续观察，然后让下一次判断比上一次更准确。
+      <strong>Start with the real problem.</strong><br />
+      I prefer a clear question to an impressive stack.<br /><br />
+      <strong>Make intelligence usable.</strong><br />
+      People should not have to understand the model before the product can help.<br /><br />
+      <strong>Ship small. Let reality answer.</strong><br />
+      Deliver, observe, and let the next decision be sharper than the last.
     </td>
   </tr>
 </table>
@@ -76,19 +78,19 @@
 <table>
   <tr>
     <td width="28%" valign="top">
-      <sub>NOW / 最近</sub>
+      <sub>NOW / CURRENTLY</sub>
     </td>
     <td width="24%" valign="top">
       <strong>AI in the real world</strong><br />
-      <sub>深度研究 AI 的真实落地应用开发。</sub>
+      <sub>Researching where applied AI creates durable value.</sub>
     </td>
     <td width="24%" valign="top">
       <strong>Keep coding</strong><br />
-      <sub>持续学习 coding 与工程实践。</sub>
+      <sub>Sharpening the craft, one useful system at a time.</sub>
     </td>
     <td width="24%" valign="top">
       <strong>Learn the business</strong><br />
-      <sub>理解产品、商业模式与增长。</sub>
+      <sub>Studying product, business models, and growth.</sub>
     </td>
   </tr>
 </table>
@@ -96,7 +98,7 @@
 <br />
 
 <blockquote>
-  <p>离开编辑器之后，我会去拍胶片、健身、旅行、看电影，偶尔喝两杯。</p>
+  <p>Outside the editor, I shoot film, work out, travel, watch good films, and occasionally raise a glass.</p>
 </blockquote>
 
 <br />
