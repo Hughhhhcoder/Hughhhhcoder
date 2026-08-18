@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: contribution-snake
+  group: profile-content-refresh
   cancel-in-progress: false
 
 jobs:
