@@ -53,21 +53,25 @@
 
 <br />
 
-<table>
-  <tr>
-    <td width="28%" valign="top">
-      <sub>HOW I WORK</sub>
-    </td>
-    <td width="72%" valign="top">
-      <strong>Start with the real problem.</strong><br />
-      I prefer a clear question to an impressive stack.<br /><br />
-      <strong>Make intelligence usable.</strong><br />
-      People should not have to understand the model before the product can help.<br /><br />
-      <strong>Ship small. Let reality answer.</strong><br />
-      Deliver, observe, and let the next decision be sharper than the last.
-    </td>
-  </tr>
-</table>
+<h2>HOW I WORK</h2>
+
+<p>
+  <sub>01 / START WITH THE REAL PROBLEM</sub><br />
+  <strong>Start with the real problem.</strong><br />
+  I prefer a clear question to an impressive stack.
+</p>
+
+<p>
+  <sub>02 / MAKE INTELLIGENCE USABLE</sub><br />
+  <strong>Make intelligence usable.</strong><br />
+  People should not have to understand the model before the product can help.
+</p>
+
+<p>
+  <sub>03 / SHIP SMALL</sub><br />
+  <strong>Ship small. Let reality answer.</strong><br />
+  Deliver, observe, and let the next decision be sharper than the last.
+</p>
 
 <br />
 
