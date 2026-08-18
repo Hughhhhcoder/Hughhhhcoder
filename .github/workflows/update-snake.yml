@@ -26,8 +26,8 @@ jobs:
         with:
           github_user_name: Hughhhhcoder
           outputs: |
-            assets/github-snake.svg?palette=github-light
-            assets/github-snake-dark.svg?palette=github-dark
+            assets/github-snake.svg?color_snake=%232F52FF&color_dots=%23F7F3EA,%23E0E3E8,%23B8C6B8,%232F52FF,%23E85D3A
+            assets/github-snake-dark.svg?color_snake=%23B8FF5A&color_dots=%23171B1C,%23333B3D,%237D8B75,%23B8FF5A,%23FF9A76
 
       - name: Commit updated snake
         run: |
